@@ -1858,7 +1858,7 @@ or .applet-icon,
   border-image: url("img/containers/menu-categories.svg") 8;
 }
 
-.menu-category-button {
+.menu-category-button, .starkmenu-background .menu-favorites-box .menu-category-button-selected {
   padding: .6em;
   color: rgba(0, 0, 0, 0.75);
 }
@@ -2812,6 +2812,95 @@ use to override window-list-item-box */
 /* Non grouped container */
 .window-icon-list-buttonbox {
   spacing: 2px;
+}
+
+/* ======================================
+ * ! Stark menu applet
+ * ====================================== */
+.starkmenu-background {
+  padding: 0;
+}
+
+.starkmenu-background .popup-menu-content {
+  border-image: url("img/containers/colored-bg.svg") 8;
+  padding: 8px;
+}
+
+.starkmenu-background .hover-box {
+  padding: 0 0 8px;
+}
+
+.starkmenu-background .hover-box .hover-icon, .starkmenu-background .hover-box .hover-user-icon {
+  padding: 4px;
+}
+
+.starkmenu-background .hover-box .hover-user-icon {
+  border-image: url("img/containers/inner-bg-dark.svg") 8;
+}
+
+.starkmenu-background .menu-applications-outer-box {
+  spacing: 0;
+}
+
+.starkmenu-background .menu-categories-box {
+  border-image: none;
+}
+
+.starkmenu-background .menu-favorites-box {
+  padding: 8px 1px 1px;
+  border-image: url("img/containers/inner-bg.svg") 8;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.starkmenu-background .menu-favorites-box .menu-favorites-button {
+  color: rgba(0, 0, 0, 0.75);
+  padding: 8px 16px;
+}
+
+.starkmenu-background .menu-favorites-box .menu-favorites-button:hover {
+  border-image: url("img/containers/hover-popup.svg") 10;
+}
+
+.starkmenu-background .menu-favorites-box .menu-category-button, .starkmenu-background .menu-favorites-box .menu-category-button-selected {
+  padding: 8px 16px;
+  spacing: 0px;
+}
+
+.starkmenu-background .menu-favorites-box .menu-category-button-selected {
+  border-image: url("img/containers/hover-popup.svg") 10;
+}
+
+.starkmenu-background .menu-favorites-box .menu-category-button:last-child, .starkmenu-background .menu-favorites-box .menu-category-button-selected:last-child {
+  padding: 8px;
+}
+
+.starkmenu-background .menu-favorites-box .menu-category-button:last-child > StIcon, .starkmenu-background .menu-favorites-box .menu-category-button-selected:last-child > StIcon {
+  padding: 0 8px;
+}
+
+.starkmenu-background .right-buttons-box {
+  padding: 0;
+  color: white;
+}
+
+.starkmenu-background .right-buttons-box .menu-category-button, .starkmenu-background .right-buttons-box .menu-favorites-box .menu-category-button-selected, .starkmenu-background .menu-favorites-box .right-buttons-box .menu-category-button-selected {
+  color: white;
+}
+
+.starkmenu-background .right-buttons-box .menu-category-button-selected, .starkmenu-background .right-buttons-box .menu-category-button:hover, .starkmenu-background .right-buttons-box .menu-favorites-box .menu-category-button-selected:hover, .starkmenu-background .menu-favorites-box .right-buttons-box .menu-category-button-selected:hover {
+  color: white;
+  border-image: url("img/containers/hover-transparent.svg") 10;
+}
+
+.starkmenu-background .right-buttons-box .popup-separator-menu-item {
+  -gradient-height: 1px;
+  height: 1px;
+  padding: 2px;
+}
+
+.starkmenu-background .menu-search-box {
+  border-image: url("img/containers/modal-button-box.svg") 8;
+  padding: 10px;
 }
 
 /* ======================================
