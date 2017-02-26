@@ -1,0 +1,9 @@
+/* ======================================
+ * ! Tile Previews
+ * ====================================== */
+
+.tile-preview, .tile-hud {
+	border-image: url("img/containers/tile-preview.svg") 10;
+
+	&.snap { border-image: url("img/containers/snap-preview.svg") 10; }
+}

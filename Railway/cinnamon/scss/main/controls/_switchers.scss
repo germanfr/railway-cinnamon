@@ -1,0 +1,12 @@
+/* ======================================
+ * ! Switchers
+ * ====================================== */
+
+.toggle-switch-us, .toggle-switch-intl {
+   @include size(32px, 17px);
+   background-image: url("img/controls/switch-off.svg");
+
+   &:checked {
+       background-image: url("img/controls/switch-on.svg");
+   }
+}

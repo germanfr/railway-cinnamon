@@ -1,0 +1,168 @@
+// ======================================
+//  Common button properties
+// ======================================
+@mixin btn-common {
+	background-color: rgba(0, 0, 0, 0);
+	background-gradient-direction: none;
+	background-gradient-start: rgba(0, 0, 0, 0);
+	background-gradient-end: rgba(0, 0, 0, 0);
+	box-shadow: 0 0 rgba(0, 0, 0, 0);
+	border: none;
+	border-width: 0;
+	border-radius: 0;
+
+	font-size: $font-size-base;
+
+	StIcon {
+		icon-size: 16px !important;
+	}
+}
+
+// ======================================
+//  Generate simple buttons
+//
+//  {String} $position is one of:
+//    's' (adjust style for single-child)
+//    'f' (adjust style for first-child)
+//    'l' (adjust style for last-child)
+//    'm' (adjust style for all middle children)
+//  {String} $bg-primary      is bg color
+//  {Color}  $color-primary   is text color
+//  {Color}  $color-hover     is text color of hover state
+//  {Color}  $color-pressed   is text color of pressed state
+//  {String} $bg-secondary    is bg color of focus states
+//  {Color}  $color-disabled  is text color of disabled state
+//
+//  $bg-primary & $bg-secondary arguments are interpolated
+//  into image URL's.
+//
+//  Name format for assets:
+//      button-{$bg}__{$position}.svg
+//      button-{$bg}__{$position}--hover.svg
+//      button-{$bg}__{$position}--pressed.svg
+// ======================================
+@mixin btn(
+	$position,
+	$bg-primary,
+	$color-primary,
+	$color-hover:$color-primary,
+	$color-pressed:$color-primary,
+	$bg-secondary:$bg-primary,
+	$color-disabled:$color-primary
+){
+	@include btn-common;
+
+	border-image: url("img/buttons/button-#{$bg-primary}__#{$position}.svg") 10;
+	color: $color-primary;
+	StIcon { color: $color-primary; }
+
+	&:hover {
+		border-image: url("img/buttons/button-#{$bg-primary}__#{$position}--hover.svg") 10;
+		color: $color-hover;
+		StIcon { color: $color-hover; }
+	}
+
+	&:active,
+	&:pressed,
+	&:activate,
+	&:checked,
+	&:selected {
+		border-image: url("img/buttons/button-#{$bg-primary}__#{$position}--pressed.svg") 10;
+		color: $color-pressed;
+		StIcon { color: $color-pressed; }
+	}
+
+	&:focus {
+		border-image: url("img/buttons/button-#{$bg-secondary}__#{$position}.svg") 10;
+		color: $text-primary;
+		StIcon { color: $text-primary; }
+
+		&:hover {
+			border-image: url("img/buttons/button-#{$bg-secondary}__#{$position}--hover.svg") 10;
+		}
+
+		&:active,
+		&:pressed,
+		&:activate,
+		&:checked,
+		&:selected {
+			border-image: url("img/buttons/button-#{$bg-secondary}__#{$position}--pressed.svg") 10;
+			color: $color-pressed;
+			StIcon { color: $color-pressed; }
+		}
+	}
+
+	&:grayed,
+	&:disabled,
+	&:insensitive,
+	&:focus:grayed,
+	&:focus:disabled,
+	&:focus:insensitive {
+		border-image: url("img/buttons/button-#{$bg-primary}__#{$position}.svg") 10;
+		color: $color-disabled;
+		StIcon { color: $color-disabled; }
+	}
+}
+// ======================================
+//  Standard button widths
+// ======================================
+@mixin btn-size($btn-size) {
+	@if $btn-size == "small" {
+		padding: .8em;
+	} @else if $btn-size == "wide" {
+		padding: .8em 2em;
+	} @else {
+		@include size($btn-size);
+	}
+}
+
+
+// ======================================
+//  Standard buttons
+// ======================================
+@mixin btn-primary {
+	@include btn(
+		's',
+		'primary',
+		$text-primary,
+		$text-primary,
+		$text-primary,
+		'selected',
+		$text-disabled
+	);
+	font-weight: normal;
+}
+
+@mixin btn-linked-primary {
+	@include btn('m', 'primary', $text-primary, $text-primary);
+	font-weight: normal;
+
+	&:first-child {
+		@include btn('f', 'primary', $text-primary, $text-primary);
+	}
+
+	&:last-child {
+		@include btn('l', 'primary', $text-primary, $text-primary);
+	}
+
+	&:last-child:first-child {
+		@include btn('s', 'primary', $text-primary, $text-primary);
+	}
+}
+
+// ======================================
+//  Tile buttons
+// ======================================
+@mixin btn-tile {
+	@include btn('s', 'tile', $text-primary-invert, $text-primary-invert, $text-primary);
+	font-weight: bold;
+}
+
+
+/* ======================================
+ * ! Button (global selector)
+ * ====================================== */
+.button {
+	@include btn-primary;
+	@include btn-size(wide);
+}

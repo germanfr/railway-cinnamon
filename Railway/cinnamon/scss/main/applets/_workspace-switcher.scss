@@ -1,0 +1,62 @@
+/* ======================================
+ * ! Number-mode Workspace Switcher applet
+ * ====================================== */
+
+.workspace-switcher {
+	padding: 0 2px;
+
+	&.vertical { padding: 2px 0; }
+}
+
+.workspace-button {
+	@include size(24px);
+	padding: 0 3px;
+	color: $text-secondary-invert;
+
+	&:hover {
+		border-image: url("img/panel/applet__horizontal__hover.svg") 12;
+	}
+
+	&:outlined {
+		border-image: url("img/panel/applet__horizontal__checked.svg") 12;
+	}
+
+	/* &:outlined:hover {} */
+
+	&.vertical {
+		&:hover {
+			border-image: url("img/panel/applet__vertical__hover.svg") 12;
+		}
+
+		&:outlined {
+			border-image: url("img/panel/applet__vertical__checked.svg") 12;
+		}
+	}
+}
+
+/* ======================================
+ * ! Visual-mode Workspace Switcher applet
+ * ====================================== */
+
+.workspace-graph {
+	padding: 0 6px;
+
+	.panel-left &, .panel-right & { padding: 6px 0; }
+
+	.workspace {
+		background-color: rgba(#000, .25);
+		border: 1px rgba(#000, .6);
+
+		&:active {
+			border-color: #000;
+			background-color: rgba(#000, .5);
+		}
+
+		.windows {
+			-active-window-background: rgba(#FFF, .8);
+			-active-window-border: rgba(#000, .8);
+			-inactive-window-background: rgba(#FFF, .4);
+			-inactive-window-border: rgba(#000, .4);
+		}
+	}
+}

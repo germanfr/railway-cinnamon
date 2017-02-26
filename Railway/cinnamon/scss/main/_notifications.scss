@@ -1,0 +1,86 @@
+/* ======================================
+ * ! Notifications
+ * ====================================== */
+
+.url-highlighter { link-color: $text-link; }
+
+#notification {
+	border-image: url("img/containers/tile-bg.svg") 10;
+	padding: 1.3em;
+	spacing-rows: .3em;
+	spacing-columns: 10px;
+	width: 34em;
+	margin-from-right-edge-of-screen: 0px;
+	font-size: $font-size-base;
+	color: $text-secondary-invert;
+
+	CinnamonGenericContainer * {
+		font-weight: normal;
+		font-size: $font-size-base;
+		color: $text-secondary-invert;
+
+		/* Notification title */
+		&:first-child {
+			font-size: $font-size-base;
+			padding-top: .3em;
+			color: $text-primary-invert;
+		}
+
+		&:last-child {
+			padding-top: .3em;
+			color: $text-primary-invert;
+		}
+	}
+
+	&-body {
+		font-weight: normal;
+		font-size: $font-size-base;
+	}
+
+	&-actions {
+		spacing: .3em;
+	}
+
+	// min-height hack to prevent image stretching
+	&.notification-with-image {
+		min-height: 164px;
+
+		.popup-menu-content & {
+			min-height: 178px;
+		}
+
+		#notification-body {
+			padding: 0;
+		}
+	}
+}
+
+.notification-button,
+.notification-icon-button {
+	@include btn-tile;
+	@include btn-size(small);
+}
+
+
+/* ======================================
+ * ! Notification applet
+ * ====================================== */
+
+#traycontainer {
+	padding-left: 10px;
+	max-height: 48em; // should be fixed by cinnamon
+
+	.notification-applet-padding { padding: .4em 0; }
+
+	#notification {
+		border-image: url("img/containers/inner-bg-dark.svg") 7;
+		padding: .8em;
+
+		&, * { color: $text-primary; }
+	}
+
+	.notification-button,
+	.notification-icon-button {
+		@include btn-primary;
+	}
+}

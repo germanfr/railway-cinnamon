@@ -1,0 +1,51 @@
+/* ======================================
+ * ! Sound Applet
+ * ====================================== */
+
+.sound-player {
+	padding: 0;
+
+	> StBoxLayout:first-child {
+		padding: .4em 1.3em .6em;
+		spacing: .6em;
+		font-weight: normal;
+		font-size: $font-size-lg;
+
+		StButton {
+			@include btn-primary;
+			@include btn-size(24px);
+		}
+	}
+
+	/* sometimes disappears (in all themes) */
+	&-generic-coverart {
+		padding: 0 2px;
+		border-image: url("img/containers/popup-submenu.svg") 10;
+	}
+
+	&-overlay {
+		border-image: url("img/containers/sound-applet-overlay-bg.svg") 7;
+		padding: 1.3em;
+		spacing: .5em;
+		color: $text-primary;
+
+		StButton {
+			@include btn-primary;
+			@include btn-size(small);
+		}
+
+		StBoxLayout {
+			padding-top: .2em;
+			spacing: .4em;
+		}
+	}
+
+	.slider {
+		height: 6px;
+		-slider-background-color: #cccccc;
+		-slider-active-background-color: $accent-primary;
+		-slider-handle-radius: 0;
+		border-image: none;
+		border: 0 transparent;
+	}
+}

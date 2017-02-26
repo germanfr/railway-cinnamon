@@ -1,0 +1,147 @@
+/* ======================================
+ * ! App menu applet
+ * ====================================== */
+
+@if variable-exists(menu-style)
+	and $menu-style == "default" {
+	.menu-background.menu {
+		.popup-menu-content {
+			padding: 8px 8px 18px;
+		}
+
+		.menu-applications-outer-box { spacing: 0; }
+
+		.menu-favorites-box { padding: 8px; }
+
+		.menu-favorites-button:hover {
+			border-image: url("img/containers/hover.svg") 8;
+		}
+
+		.menu-selected-app-title {
+			color: $text-primary;
+		}
+
+		.menu-selected-app-description {
+			color: $text-secondary;
+		}
+	}
+}
+@else {
+	.menu-background.menu {
+		padding: 0;
+
+		.popup-menu-content {
+			border-image: url("img/containers/colored-bg.svg") 8;
+			padding: 8px;
+		}
+	}
+}
+
+
+.menu-favorites-box {
+	padding: 0;
+}
+
+.menu-favorites-button {
+	padding: 10px 12px;
+
+	&:hover {
+		border-image: url("img/containers/hover-transparent.svg") 8;
+		color: $text-primary-invert;
+	}
+}
+
+.menu-places-box {
+	margin: auto;
+	padding: 8px;
+	border: 0 solid $text-primary;
+}
+
+.menu-places-button {
+	padding: 10px;
+}
+
+.menu-categories-box {
+	padding: 11px;
+	border-image: url("img/containers/menu-categories.svg") 8;
+}
+
+.menu-category-button {
+	padding: .6em;
+	color: $text-primary;
+
+	&-greyed {
+		padding: .6em;
+		color: $text-disabled;
+	}
+
+	&-selected {
+		padding: .6em;
+		border-image: url("img/containers/hover.svg") 7;
+		color: $text-primary;
+	}
+
+	&-label:ltr { padding-left: 5px; }
+
+	&-label:rtl { padding-right: 5px; }
+
+	&-button:hover {}
+}
+
+
+.menu-applications-outer-box {
+	spacing: 8px;
+
+	.menu-applications-inner-box {
+		padding: 8px 0;
+
+	}
+
+	StScrollView {
+		padding: 0 1px 1px;
+		border-image: url("img/containers/menu-apps.svg") 8;
+	}
+}
+
+.menu-application-button {
+	padding: 8px 16px;
+
+	&-selected, &-selected:highlighted {
+		padding: 8px 16px;
+		border-image: url("img/containers/hover-popup.svg") 10;
+		color: $text-primary;
+	}
+
+	&:highlighted {
+		border-image: url("img/containers/hover-popup__highlighted.svg") 10;
+	}
+
+	&-label:ltr { padding-left: 5px; }
+
+	&-label:rtl { padding-right: 5px; }
+}
+
+.menu-selected-app-box {
+	padding: 8px;
+	text-align: right;
+}
+
+.menu-selected-app-title {
+	color: $text-primary-invert;
+}
+
+.menu-selected-app-description {
+	max-width: 150px;
+	color: $text-secondary-invert;
+}
+
+.menu-search-box {
+	padding: 11px;
+	border-image: url("img/containers/menu-search.svg") 10;
+}
+
+/* The right click menu */
+.menu-applications-inner-box StScrollView {
+	border-image: url("img/containers/popup-submenu.svg") 10;
+	padding: 1em .2em;
+}

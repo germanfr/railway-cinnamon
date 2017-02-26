@@ -1,0 +1,83 @@
+/* ======================================
+ * ! Calendar
+ * ====================================== */
+
+.calendar-day {/* ! */}
+.calendar-day-top {/* ! */}
+.calendar-day-left {/* ! */}
+
+.datemenu-date-label {
+	padding: .7em 1.3em .4em;
+	font-size: $font-size-base;
+	text-align: center;
+	color: $text-info;
+}
+
+.calendar {
+	padding: .8em 1.3em .6em;
+	spacing-rows: 0;
+	spacing-columns: 2px;
+}
+
+.calendar-month-label {
+	padding-top: 2px;
+	font-size: $font-size-base;
+	color: $text-primary;
+	padding: .5em;
+}
+
+.calendar-change-month-back,
+.calendar-change-month-forward:rtl {
+	background-image: url("img/controls/calendar-arrow-left.svg");
+	background-size: 16px;
+	@include size(16px);
+	padding: 0 .2em;
+	color: $text-primary;
+
+	&:hover {
+		border-image: url("img/containers/hover.svg") 6;
+	}
+}
+
+.calendar-change-month-forward,
+.calendar-change-month-back:rtl {
+	background-image: url("img/controls/calendar-arrow-right.svg");
+	background-size: 16px;
+	@include size(16px);
+	padding: 0 .2em;
+
+	&:hover {
+		border-image: url("img/containers/hover.svg") 6;
+	}
+}
+
+.calendar-day-base {
+	font-size: $font-size-base;
+	padding: 1px 0 0 1px;
+	@include size(2.4em, 1.6em);
+}
+
+.calendar-day-heading {
+	color: $text-primary;
+	padding: 1.2em 0 0;
+	text-align: center;
+}
+
+.calendar-work-day,
+.calendar-nonwork-day {
+	border: none;
+	color: $text-primary;
+}
+
+.calendar-today {
+	border-image: url("img/containers/hover.svg") 6;
+}
+
+.calendar-other-month-day {
+	color: $text-secondary;
+}
+
+.calendar-week-number {
+	color: $text-secondary;
+	font-size: $font-size-base;
+}

@@ -1,0 +1,77 @@
+/* ======================================
+ * ! Slingshot
+ * ====================================== */
+
+/* Use to override the '.popup-menu-content' selector */
+.slingshot {
+	padding: 0;
+}
+
+/* Separator */
+.slingshot .separator {
+	background-color: $border-shape;
+}
+
+/* Entry */
+.slingshot .entry {
+	@include entry;
+}
+
+/* Paginator */
+.slingshot .button {
+	box-shadow: none;
+	text-shadow: 0 0 rgba(#000, 0);
+
+	@include btn-primary;
+	padding: .7em;
+}
+
+/* Applications */
+.slingshot .button.app {
+	border-image: none;
+	border-width: 0;
+	text-shadow: 0 0 rgba(#000, 0);
+	font-size: $font-size-base;
+	font-weight: normal;
+	padding: 16px;
+
+	&:hover, &:focus {
+		border-image: url("img/containers/hover.svg") 7;
+		background-color: rgba(0, 0, 0, 0);
+		color: $text-primary;
+	}
+}
+
+/* Categories */
+.slingshot .sidebar {
+	padding: 0 8px 0 18px;
+	spacing: 4px;
+
+	.button {
+		border-image: none;
+		padding: 5px;
+		border-color: rgba(0, 0, 0, 0);
+		font-size: $font-size-base;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		font-weight: normal;
+
+		&:hover,
+		&:hover:active,
+		&:hover:checked {
+			border-image: url("img/containers/hover.svg") 10;
+			color: $text-primary;
+		}
+
+		&:checked {
+			border-image: url("img/containers/hover-transparent.svg") 10;
+			color: $text-primary;
+		}
+	}
+}
+
+/* Linked buttons */
+.slingshot .linked .button {
+	@include btn-linked-primary;
+	padding: .8em;
+}

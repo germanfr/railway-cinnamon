@@ -1,0 +1,82 @@
+/* ======================================
+ * ! Desktop Capture applet
+ * ====================================== */
+
+
+/* Display of preview image in notifications */
+.screenshot-thumbnail {
+	border-image: url("img/containers/inner-bg-dark.svg") 7;
+	padding: 8px;
+
+	&-hover {
+		border-image: url("img/containers/hover.svg") 7;
+	}
+}
+
+/* Window capture mode */
+.capture-outline-background {
+	border-image: url("img/containers/tile-preview.svg") 7;
+}
+
+.capture-outline-frame {
+	border: 0;
+	border-radius: 0;
+}
+
+.overlay-iconbox {}
+
+/* App icon (window capture mode) */
+.overlay-icon {
+	padding: 10px;
+	border: 0;
+	@include size(32px);
+	box-shadow: 0 0 transparent;
+	icon-shadow: transparent 0 0 0;
+}
+
+.overlay-label-title, .overlay-label-size {
+	color: $text-primary;
+	text-shadow: 0 0 16px 4px #fff;
+	font-weight: normal;
+	font-size: $font-size-lg;
+}
+
+.capture-countdown-timer {
+	border-image: url("img/containers/tile-bg.svg") 7;
+	@include size($font-size-xxxl);
+	font-size: $font-size-xxxl;
+	font-weight: normal;
+	text-align: center;
+	color: $text-primary-invert;
+}
+
+/* Desktop overlay */
+.shadow-container {}
+
+.cover {
+	background-color: rgba(#000, .65);
+}
+
+/* Instructions dialog */
+.instructions-container {
+	background-color: rgba(#000, .65);
+}
+
+.instructions-label-header {
+	text-align: center;
+	font-size: $font-size-xxl;
+	font-weight: bold;
+	color: $text-primary-invert;
+	text-shadow: 0 0 transparent;
+}
+
+.instructions-label-text {
+	color: $text-primary-invert;
+	text-align: center;
+	font-size: $font-size-xl;
+	text-shadow: 0 0 transparent;
+}
+
+.menuitem-detail {
+	color: $text-secondary;
+}

@@ -1,0 +1,135 @@
+/* ======================================
+ * ! Lightbox + flashspot
+ * ====================================== */
+
+/* The background shade when a dialog appears */
+.lightbox { background-color: rgba(#000, .65); }
+
+
+/* Among other places, appears when adding an applet */
+.flashspot { background-color: rgba(#fff, .6); }
+
+
+/* ======================================
+ * ! Modal dialogs
+ * ====================================== */
+
+.modal-dialog {
+	border-radius: 0;
+	padding: 8px;
+	color: $text-primary;
+	border-image: url("img/containers/popup.svg") 10;
+
+	> * {
+		padding: 10px;
+		border-radius: 0;
+	}
+
+	&-button-box {
+		border-image: url("img/containers/modal-button-box.svg") 10;
+		spacing: 0;
+		padding: 11px 10px 10px;
+	}
+
+	&-button {
+		@include btn-primary;
+		@include btn-size(wide);
+	}
+}
+
+/* ======================================
+ * ! Run dialog
+ * ====================================== */
+
+.run-dialog {
+
+	padding: 8px;
+
+	> * {
+		background-color: #F0F0F0;
+		spacing: 10px;
+		padding: 10px;
+	}
+
+	> .modal-dialog-button-box {
+		background-color: rgba(0, 0, 0, 0);
+		border-image: none;
+		padding: 0;
+		height: 0;
+	}
+
+	&-error-box {
+		padding: 0;
+		spacing: 1em;
+		color: $text-danger;
+
+		StIcon {
+			@include size(16px);
+			color: $accent-danger;
+		}
+	}
+
+	&-completion-box {
+		border-image: url("img/containers/inner-bg.svg") 10;
+		font-size: $font-size-base;
+		padding: 1em .7em 0;
+		color: $text-primary;
+	}
+
+	&-label {/*!*/}
+
+	&-entry {/*!*/}
+}
+/* ======================================
+ * ! About Dialog
+ * ====================================== */
+
+.about-content {
+	width: 550px;
+	height: 250px;
+	spacing: 16px;
+	padding: 8px;
+}
+
+.about-icon {
+	color: $text-primary;
+	border-image: url("img/containers/inner-bg-dark.svg") 10;
+	padding: 8px;
+}
+
+.about-title {
+	font-size: $font-size-xxl;
+	padding-left: 16px;
+	font-weight: normal;
+}
+
+.about-uuid {
+	font-size: $font-size-base;
+	color: $text-secondary;
+	padding-left: 16px;
+}
+
+.about-description {
+	padding-left: 16px;
+}
+
+.about-version {
+	padding: 8px;
+	font-size: $font-size-base;
+	font-weight: bold;
+	color: $text-info;
+}
+
+.about-scrollBox {
+	border-image: url("img/containers/inner-bg-dark.svg") 10;
+	padding: 1px;
+
+	&-innerBox {
+		padding: 1.2em;
+		spacing: 1.2em;
+	}
+}
+
+#about-website:hover StLabel {
+	text-decoration: underline;
+}

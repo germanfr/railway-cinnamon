@@ -1,0 +1,29 @@
+/* ======================================
+ * ! On-screen Keyboard
+ * ====================================== */
+
+#keyboard {
+	border-image: url("img/containers/sound-applet-overlay-bg.svg") 7;
+}
+
+.keyboard-layout {
+	spacing: 5px;
+	padding: 8px;
+}
+
+.keyboard-row {
+	spacing: 5px;
+}
+
+.keyboard-key {
+	@include btn-primary;
+	min-height: 30px;
+	min-width: 30px;
+	font-size: $font-size-xl;
+}
+
+/* Appears when long-pressing certain keys */
+.keyboard-subkeys {
+	padding: 10px;
+	border-image: url("img/containers/popup.svg") 10;
+}

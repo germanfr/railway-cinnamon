@@ -1,0 +1,17 @@
+/* ======================================
+ * ! Slider
+ * ====================================== */
+
+.slider {
+	height: 16px;
+	min-width: 15em;
+	-slider-height: 6px;
+	-slider-background-color: $border-shape;
+	-slider-active-background-color: $accent-primary;
+	-slider-border-color: transparent;
+	-slider-active-border-color: transparent;
+	-slider-border-width: 0;
+	-slider-handle-radius: 2px;
+	-slider-radius: 0px;
+	color: transparent;
+}

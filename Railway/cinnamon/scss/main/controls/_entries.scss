@@ -1,0 +1,37 @@
+@mixin entry($height: 2em, $width: 220px) {
+	border-image: url("img/controls/entry.svg") 10;
+	color: $text-secondary;
+	padding: .3em .7em;
+	@include size($width, $height);
+	font-size: $font-size-base;
+	font-weight: normal;
+
+	&:focus, &:active, &:pressed, %caret {
+		color: $text-primary;
+		caret-color: $text-primary;
+		caret-size: 1px;
+		selected-color: $text-primary-invert;
+		selection-background-color: $accent-info;
+	}
+
+	StIcon {
+		color: $text-secondary;
+		icon-size: 16px;
+	}
+
+	&:focus > StIcon,
+	&:active > StIcon,
+	&:pressed > StIcon {
+		color: $text-primary;
+	}
+}
+
+/* ======================================
+ * ! Entries
+ * ====================================== */
+
+.menu StEntry,
+.modal-dialog StEntry,
+#notification StEntry {
+	@include entry;
+}

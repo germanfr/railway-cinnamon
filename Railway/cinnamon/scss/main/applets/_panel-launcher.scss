@@ -1,0 +1,22 @@
+/* ======================================
+ * ! Panel Launchers Applet
+ * ====================================== */
+
+.panel-launchers, .panel-launchers.vertical {
+	spacing: 0;
+	padding: 0 !important;
+}
+
+.launcher {
+	padding: 0 6px;
+
+	.vertical & { padding: 6px 0; }
+
+	&:hover {
+		border-image: url("img/panel/applet__horizontal__hover.svg") 12;
+
+		.vertical & {
+			border-image: url("img/panel/applet__vertical__hover.svg") 12;
+		}
+	}
+}

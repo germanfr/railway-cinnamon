@@ -1,0 +1,35 @@
+/* ======================================
+ * ! Panel
+ * ====================================== */
+$panel-height: 32px;
+$panel-width: 40px;
+
+@each $pos in top, bottom, left, right {
+	.panel-#{$pos} {
+		border-image: url("img/panel/panel-#{$pos}.svg") 10;
+		font-size: $font-size-base;
+		@include size($panel-width, $panel-height);
+
+		&:highlight {
+			.panelLeft, .panelCenter, .panelRight {
+				background-color: rgba($accent-hlight, .5);
+			}
+		}
+	}
+}
+
+/* Panel edit mode */
+.panelLeft:dnd,
+.panelRight:dnd {
+	background-color: rgba($accent-hlight, .5);
+}
+
+.panelCenter:dnd {
+	background-color: rgba($accent-danger, .5);
+}
+
+.panel-dummy {
+	background-color: rgba($accent-hlight, .75);
+
+	&:entered { background-color: rgba($accent-hlight, .9); }
+}

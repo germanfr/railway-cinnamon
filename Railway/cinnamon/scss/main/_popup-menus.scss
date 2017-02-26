@@ -1,0 +1,105 @@
+/* ======================================
+ * ! Popup Menus
+ * ====================================== */
+
+.menu {
+	padding: 4px;
+	min-width: 100px;
+}
+
+.popup-menu-content {
+	border-image: url("img/containers/popup.svg") 10;
+	padding: 16px 8px;
+	color: $text-primary;
+}
+
+.popup-menu-icon {
+	icon-size: 16px;
+	color: $text-secondary;
+}
+
+.popup-menu-item {
+	padding: .5em 1.4em;
+	spacing: 1em;
+
+	&:active {
+		border-image: url("img/containers/hover-popup.svg") 10;
+	}
+
+	&:insensitive {
+		font-weight: normal;
+		color: $text-disabled;
+
+		.popup-menu-icon, StIcon {
+			color: $text-disabled;
+		}
+	}
+}
+
+.popup-menu-item-dot {
+	color: $accent-primary;
+}
+
+.popup-sub-menu {
+	border-image: url("img/containers/popup-submenu.svg") 9;
+	box-shadow: none;
+	background-gradient-direction: none;
+	padding: 8px 0;
+	color: $text-primary;
+
+	.popup-menu-item:active {
+		border-image: url("img/containers/hover-popup.svg") 9;
+		color: $text-primary;
+	}
+}
+
+.popup-menu-arrow {
+	//color: transparent;
+	icon-size: 13px;
+	@include size(10px);
+	padding: 0 4px 2px 0;
+	//background-image: url("img/controls/calendar-arrow-right.svg");
+	//background-color: $border-shape;
+}
+.popup-submenu-menu-item:open {
+	background-color: transparent;
+	.popup-menu-arrow {
+		padding: 0 4px 2px 0;
+	}
+}
+
+.popup-separator-menu-item {
+	-gradient-height: 1px;
+	-gradient-start: $border-shape;
+	-gradient-end: $border-shape;
+	-margin-horizontal: 0;
+	height: 1px;
+}
+
+.popup-slider-menu-item {
+	@extend .slider;
+}
+
+/* Right click in scale (show all windows) */
+.popup-combo-menu {
+	border-image: url("img/containers/popup.svg") 10;
+	padding: .8em .3em;
+	color: $text-primary;
+}
+
+.popup-inactive-menu-item {
+	color: $text-secondary;
+}
+
+.popup-subtitle-menu-item {
+	font-weight: bold;
+}
+
+/* used in power applet */
+.popup-device-menu-item {
+	spacing: .8em;
+
+	.popup-inactive-menu-item {
+		color: $text-info;
+	}
+}

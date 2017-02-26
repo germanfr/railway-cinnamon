@@ -1,0 +1,98 @@
+/* Use to add extra border around thumbnail or adjust the distance from the panel.  can be used for aero effect */
+.thumbnail-popup-content {
+	padding: 0;
+}
+
+/* Padding can only be set between 1px and 10px other wise it will default to 5px */
+.thumbnail-row {
+	padding: 8px;
+	border-image: url("img/containers/colored-bg.svg") 10;
+	background: none;
+}
+
+/* the padding can only be set between 2px and 10px other wise it will default to 10; border-width is fixed :( */
+/* does not seem to happen anymore */
+.thumbnail-row .thumbnail-box {
+	padding: 4px;
+}
+
+.thumbnail-row .thumbnail-box:outlined {
+	border-image: url("img/containers/hover-transparent.svg") 7;
+}
+
+/* the pseudo are not being overidden so I can't do a hover. that will need to be added to themes */
+.thumbnail-row .thumbnail-alerts {
+	border-image: url("img/containers/hover.svg") 7;
+}
+
+.thumbnail-icon {
+	@include size(16px);
+	padding: .4em;
+}
+
+.thumbnail-label {
+	color: $text-primary-invert;
+	font-weight: normal;
+	padding: .45em .3em .35em;
+}
+
+/*  Careful with the calculation of background position or you will have to much dead space.*/
+.thumbnail-close {
+	background-image: url("img/controls/close-simple.svg");
+	background-size: 16px;
+	background-position: -5px 4px;
+	@include size(16px);
+}
+
+/*App List Padding is set in the the applet settings
+use to override window-list-item-box */
+.app-list-item-box {
+	color: $text-primary-invert;
+	text-shadow: 0px 0px 4px 4px rgba(#000, .2);
+
+	background-gradient-direction: vertical;
+	background-gradient-start: transparent;
+	background-gradient-end: transparent;
+	transition-duration: 200;
+
+	&:hover { border-image: url("img/panel/applet__horizontal__checked.svg") 8; }
+
+	.panel-right &:hover, .panel-left &:hover {
+		border-image: url("img/panel/applet__vertical__checked.svg") 8;
+	}
+
+	&:hover:active, &:hover:checked, &:hover:focus {
+		background-gradient-end: rgba(#fff, .25);
+	}
+
+	&:active, &:checked, &:focus  {
+		border-image: url("img/panel/window-list.svg") 8;
+	}
+
+	&:active:focus {
+		border-image: url("img/panel/window-list__active.svg") 8;
+	}
+
+	&-demands-attention {
+		border-image: url("img/panel/window-list__atention.svg") 8;
+	}
+}
+
+/* use to override panel-launcher */
+.app-is-favorite {
+	border-image: none;
+}
+
+/* NumLabel */
+.window-icon-list-numlabel {
+	z-index: 99;
+	color: $text-primary-invert;
+	text-shadow: 1px 1px 1px rgba(#000, .8);
+	@include size($font-size-lg);
+	padding: 1px 0 0 1px;
+	font-size: $font-size-lg;
+	font-weight: normal;
+}
+
+/* Non grouped container */
+.window-icon-list-buttonbox { spacing: 2px; }

@@ -1,0 +1,36 @@
+/* ======================================
+ * ! Desklets
+ * ====================================== */
+
+.desklet {
+	color: $text-primary-invert;
+
+	&-with-borders {
+		border-image: url("img/containers/colored-bg.svg") 9;
+		color: $text-primary-invert;
+		text-shadow: none;
+		padding: 8px;
+	}
+
+	&-with-borders-and-header {
+		border-image: url("img/containers/colored-bg__top.svg") 9;
+		color: $text-primary-invert;
+		text-shadow: none;
+		padding: 8px;
+	}
+
+	&-header {
+		border-image: url("img/containers/colored-bg__bottom.svg") 9;
+		color: $text-primary-invert;
+		text-shadow: none;
+		padding: 8px;
+
+		padding-bottom: 0;
+		font-size: $font-size-lg;
+		font-weight: normal;
+	}
+
+	&-drag-placeholder {
+		border-image: url("img/containers/hover.svg") 9;
+	}
+}

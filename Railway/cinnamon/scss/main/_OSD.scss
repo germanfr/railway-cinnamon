@@ -1,0 +1,58 @@
+/* ======================================
+ * ! OSD
+ * ====================================== */
+
+/* Appears when adding panels or snapping windows */
+.info-osd {
+	border-image: url("img/containers/tile-bg.svg") 10;
+	spacing: 0;
+	padding: .8em;
+	color: $text-primary-invert;
+	text-align: center;
+	font-weight: normal;
+	font-size: $font-size-xl;
+}
+
+.osd-window {
+	border-image: url("img/containers/tile-bg.svg") 10;
+	padding: 16px 24px;
+	spacing: 1em;
+	color: $text-primary-invert;
+
+	.level {
+		background-color: $hlight-tile;
+		border: 0;
+		border-radius: 0;
+		height: 8px;
+		color: #fff;
+	}
+}
+
+/* Appears when switching workspaces */
+.workspace-osd {
+	border-image: url("img/containers/tile-bg.svg") 10;
+	padding: .8em;
+	font-weight: normal;
+	font-size: $font-size-xxl;
+	color: $text-primary-invert;
+}
+
+/* Appears when selecting with looking glass*/
+#LookingGlassDialog {
+	border-image: url("img/containers/tile-bg.svg") 10;
+	padding: 1.4em;
+	spacing: .4em;
+	color: $text-primary-invert;
+	text-align: center;
+
+	StLabel:first-child  {
+		font-weight: normal;
+		font-size: $font-size-base;
+	}
+
+	StLabel:last-child  {
+		padding-top: .4em;
+		color: $text-secondary-invert;
+		font-size: $font-size-base;
+	}
+}

@@ -1,0 +1,27 @@
+/* ======================================
+ * ! Stopwatch
+ * ====================================== */
+
+.stopwatch-ready,
+.stopwatch-running,
+.stopwatch-paused,
+.stopwatch-day-exceeded,
+.stopwatch-running-day-exceeded,
+.stopwatch-paused-day-exceeded {
+	background-color: rgba(0, 0, 0, 0);
+	padding: 0 8px;
+}
+
+.panel-top, .panel-bottom {
+	.stopwatch-ready:hover,
+	.stopwatch-paused:hover {
+		border-image: url("img/panel/applet__horizontal__hover.svg") 12;
+	}
+	.stopwatch-running,
+	.stopwatch-running:hover {
+		border-image: url("img/panel/applet__horizontal__checked.svg") 4;
+	}
+}
+
+.stopwatch-ready * { color: $text-secondary-invert; }
+.stopwatch-ready:hover * { color: $text-primary-invert; }
