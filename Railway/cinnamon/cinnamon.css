@@ -1732,6 +1732,7 @@ or .applet-icon,
 }
 
 .workspace-button:outlined {
+  color: white;
   border-image: url("img/panel/applet__horizontal__checked.svg") 12;
 }
 
