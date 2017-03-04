@@ -6,7 +6,7 @@
 	spacing: 2px;
 	padding: 0;
 
-	.window-list-item-box { padding: 0 2px 0 0; }
+	.window-list-item-box { padding: 0 4px 0 0; }
 	#appMenuIcon { padding: 0 0 0 8px; }
 
 	&.vertical {
@@ -31,10 +31,10 @@
 		&:active, &:checked, &:focus  {
 			border-image: url("img/panel/window-list__active.svg") 8;
 		}
+	}
 
-		&-demands-attention {
-			border-image: url("img/panel/window-list__atention.svg") 8;
-		}
+	.window-list-item-demands-attention {
+		border-image: url("img/panel/window-list__atention.svg") 8;
 	}
 }
 

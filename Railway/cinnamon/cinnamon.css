@@ -1459,7 +1459,7 @@ or .applet-icon,
 }
 
 .window-list-box .window-list-item-box {
-  padding: 0 2px 0 0;
+  padding: 0 4px 0 0;
 }
 
 .window-list-box #appMenuIcon {
@@ -1492,7 +1492,7 @@ or .applet-icon,
   border-image: url("img/panel/window-list__active.svg") 8;
 }
 
-.window-list-box .window-list-item-box-demands-attention {
+.window-list-box .window-list-item-demands-attention {
   border-image: url("img/panel/window-list__atention.svg") 8;
 }
 
