@@ -27,6 +27,11 @@
 		spacing: 0;
 	}
 
+	.menu-applications-scrollbox {
+		border-image: none;
+		padding: 0px;
+	}
+
 	.menu-categories-box {
 		border-image: none;
 	}
@@ -54,6 +59,10 @@
 			&-selected {
 				@extend .menu-category-button;
 				border-image: url("img/containers/hover-popup.svg") 10;
+			}
+
+			&-greyed {
+				padding: 8px 16px;
 			}
 
 			// "All programs" button
@@ -85,8 +94,8 @@
 		}
 	}
 
-	.menu-search-box {
+	.starkmenu-search-box {
 		border-image: url("img/containers/modal-button-box.svg") 8;
-		padding: 10px;
+		padding: 10px 9px 9px;
 	}
 }
