@@ -19,7 +19,11 @@
 
 		.hover-user-icon {
 			@extend .hover-icon;
-			border-image: url("img/containers/inner-bg-dark.svg") 8;
+			border-image: url("img/containers/inner-bg.svg") 8;
+		}
+
+		.starkmenu-user-label {
+			padding: 0 8px;
 		}
 	}
 
@@ -37,7 +41,7 @@
 	}
 
 	.menu-favorites-box {
-		padding: 8px 1px 1px;
+		padding: 1px;
 		border-image: url("img/containers/inner-bg.svg") 8;
 		color: $text-primary;
 
@@ -54,8 +58,6 @@
 			padding: 8px 16px;
 			spacing: 0px;
 
-
-
 			&-selected {
 				@extend .menu-category-button;
 				border-image: url("img/containers/hover-popup.svg") 10;
@@ -71,6 +73,11 @@
 
 				> StIcon { padding: 0 8px; }
 			}
+		}
+
+		.menu-context-menu {
+			border-image: url("img/containers/popup-submenu.svg") 10;
+			padding: 1em .2em;
 		}
 	}
 
@@ -92,10 +99,29 @@
 			height: 1px;
 			padding: 2px;
 		}
-	}
 
-	.starkmenu-search-box {
-		border-image: url("img/containers/modal-button-box.svg") 8;
-		padding: 10px 9px 9px;
+		.starkhover-box {
+			// Shutdown dropdown menu (it has no class name)
+			StBin:last-child { border-image: none; }
+
+			.popup-menu-item {
+				color: $text-primary-invert;
+				&:active {
+					border-image: url("img/containers/hover-transparent.svg") 10;
+				}
+			}
+		}
+	}
+}
+
+.starkmenu-search-box {
+	border-image: url("img/containers/modal-button-box.svg") 8;
+	padding: 10px 9px 9px;
+}
+
+@each $action in quit, logout, lockscreen {
+	.starkmenu-#{$action}-horizontal-button,
+	.starkmenu-#{$action}-horizontal-button-selected {
+		padding: 0;
 	}
 }

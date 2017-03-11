@@ -2836,7 +2836,11 @@ use to override window-list-item-box */
 }
 
 .starkmenu-background .hover-box .hover-user-icon {
-  border-image: url("img/containers/inner-bg-dark.svg") 8;
+  border-image: url("img/containers/inner-bg.svg") 8;
+}
+
+.starkmenu-background .hover-box .starkmenu-user-label {
+  padding: 0 8px;
 }
 
 .starkmenu-background .menu-applications-outer-box {
@@ -2853,7 +2857,7 @@ use to override window-list-item-box */
 }
 
 .starkmenu-background .menu-favorites-box {
-  padding: 8px 1px 1px;
+  padding: 1px;
   border-image: url("img/containers/inner-bg.svg") 8;
   color: rgba(0, 0, 0, 0.75);
 }
@@ -2888,6 +2892,11 @@ use to override window-list-item-box */
   padding: 0 8px;
 }
 
+.starkmenu-background .menu-favorites-box .menu-context-menu {
+  border-image: url("img/containers/popup-submenu.svg") 10;
+  padding: 1em .2em;
+}
+
 .starkmenu-background .right-buttons-box {
   padding: 0;
   color: white;
@@ -2908,9 +2917,36 @@ use to override window-list-item-box */
   padding: 2px;
 }
 
-.starkmenu-background .starkmenu-search-box {
+.starkmenu-background .right-buttons-box .starkhover-box StBin:last-child {
+  border-image: none;
+}
+
+.starkmenu-background .right-buttons-box .starkhover-box .popup-menu-item {
+  color: white;
+}
+
+.starkmenu-background .right-buttons-box .starkhover-box .popup-menu-item:active {
+  border-image: url("img/containers/hover-transparent.svg") 10;
+}
+
+.starkmenu-search-box {
   border-image: url("img/containers/modal-button-box.svg") 8;
   padding: 10px 9px 9px;
+}
+
+.starkmenu-quit-horizontal-button,
+.starkmenu-quit-horizontal-button-selected {
+  padding: 0;
+}
+
+.starkmenu-logout-horizontal-button,
+.starkmenu-logout-horizontal-button-selected {
+  padding: 0;
+}
+
+.starkmenu-lockscreen-horizontal-button,
+.starkmenu-lockscreen-horizontal-button-selected {
+  padding: 0;
 }
 
 /* ======================================
