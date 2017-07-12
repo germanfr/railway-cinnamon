@@ -20,11 +20,15 @@
 	color: $text-primary-invert;
 
 	.level {
-		background-color: $hlight-tile;
+		background-color: $text-disabled-invert;
 		border: 0;
 		border-radius: 0;
 		height: 8px;
-		color: #fff;
+		color: $text-primary-invert;
+	}
+
+	.level-bar {
+		background-color: $text-primary-invert;
 	}
 }
 

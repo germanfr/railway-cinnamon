@@ -1985,11 +1985,15 @@ or .applet-icon,
 }
 
 .osd-window .level {
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(255, 255, 255, 0.3);
   border: 0;
   border-radius: 0;
   height: 8px;
-  color: #fff;
+  color: white;
+}
+
+.osd-window .level-bar {
+  background-color: white;
 }
 
 /* Appears when switching workspaces */
