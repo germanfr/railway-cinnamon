@@ -3,14 +3,15 @@
  * ====================================== */
 
 .menu {
-	padding: 4px;
+	@include colored-element;
+	margin: 4px;
 	min-width: 100px;
 }
 
 .popup-menu-content {
-	border-image: url("img/containers/popup.svg") 10;
-	padding: 16px 8px;
 	color: $text-primary;
+	border-image: url("img/containers/inner-bg.svg") 3;
+	padding: 7px 1px;
 }
 
 .popup-menu-icon {
@@ -20,7 +21,7 @@
 
 .popup-menu-item {
 	padding: .5em 1.4em;
-	spacing: 1em;
+	spacing: .5em;
 
 	&:active {
 		border-image: url("img/containers/hover-popup.svg") 10;
@@ -44,7 +45,7 @@
 	border-image: url("img/containers/popup-submenu.svg") 9;
 	box-shadow: none;
 	background-gradient-direction: none;
-	padding: 8px 0;
+	padding: 9px 0;
 	color: $text-primary;
 
 	.popup-menu-item:active {
@@ -54,12 +55,10 @@
 }
 
 .popup-menu-arrow {
-	//color: transparent;
 	icon-size: 13px;
 	@include size(10px);
 	padding: 0 4px 2px 0;
-	//background-image: url("img/controls/calendar-arrow-right.svg");
-	//background-color: $border-shape;
+	color: $text-primary;
 }
 .popup-submenu-menu-item:open {
 	background-color: transparent;
@@ -70,8 +69,8 @@
 
 .popup-separator-menu-item {
 	-gradient-height: 1px;
-	-gradient-start: $border-shape;
-	-gradient-end: $border-shape;
+	-gradient-start: $border-element;
+	-gradient-end: $border-element;
 	-margin-horizontal: 0;
 	height: 1px;
 }
@@ -82,9 +81,13 @@
 
 /* Right click in scale (show all windows) */
 .popup-combo-menu {
-	border-image: url("img/containers/popup.svg") 10;
-	padding: .8em .3em;
-	color: $text-primary;
+	border-image: url("img/containers/tile-bg.svg") 3;
+	padding: 2px + 1;
+	color: $text-primary-invert;
+
+	.popup-menu-item:active {
+		border-image: url("img/containers/hover-transparent.svg") 3;
+	}
 }
 
 .popup-inactive-menu-item {

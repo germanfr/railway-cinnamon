@@ -11,14 +11,14 @@
 .workspace-button {
 	@include size(24px);
 	padding: 0 3px;
-	color: $text-secondary-invert;
+	color: $text-secondary-contrast;
 
 	&:hover {
 		border-image: url("img/panel/applet__horizontal__hover.svg") 12;
 	}
 
 	&:outlined {
-		color: $text-primary-invert;
+		color: $text-primary-contrast;
 		border-image: url("img/panel/applet__horizontal__checked.svg") 12;
 	}
 

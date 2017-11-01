@@ -3,11 +3,12 @@
  * ====================================== */
 
 .starkmenu-background {
-	padding: 0;
+	@include colored-element;
+	margin: 0;
 
 	.popup-menu-content {
-		border-image: url("img/containers/colored-bg.svg") 8;
-		padding: 8px;
+		border-image: none;
+		padding: 0;
 	}
 
 	.hover-box {
@@ -83,13 +84,13 @@
 
 	.right-buttons-box {
 		padding: 0;
-		color: $text-primary-invert;
+		color: $text-primary-contrast;
 
 		.menu-category-button {
-			color: $text-primary-invert;
+			color: $text-primary-contrast;
 
 			&-selected, &:hover {
-				color: $text-primary-invert;
+				color: $text-primary-contrast;
 				border-image: url("img/containers/hover-transparent.svg") 10;
 			}
 		}
@@ -115,8 +116,8 @@
 }
 
 .starkmenu-search-box {
-	border-image: url("img/containers/modal-button-box.svg") 8;
-	padding: 10px 9px 9px;
+	border-image: url("img/containers/menu-search__bottom.svg") 8;
+	padding: 11px 10px 10px;
 }
 
 @each $action in quit, logout, lockscreen {

@@ -3,14 +3,17 @@
  * ====================================== */
 
 .grid-panel {
-	border-image: url("img/containers/popup.svg") 10;
-	width: 220px;
-	padding: 8px;
+	@include colored-element;
+	width: 220px; // fixed
 	spacing: 0;
+	border-radius: 0;
+
+	> * {
+		border-image: url("img/containers/inner-bg__middle.svg") 3;
+	}
 }
 
 .grid-title {
-	padding: 6px 8px 2px;
 	font-size: $font-size-base;
 	font-weight: normal;
 	color: $text-primary;
@@ -18,10 +21,10 @@
 }
 
 .table {
-	padding: 10px;
-	padding-top: 0px;
+	padding: 0 (10px + 1);
 
 	&-element {
+		margin: 2px;
 		border-image: url("img/containers/inner-bg-dark.svg") 10;
 
 		&:hover, &:activate {
@@ -32,17 +35,17 @@
 
 
 .top-box {
-	padding: 10px;
+	padding: 10px + 1;
+	padding-bottom: 8px;
+	border-image: url("img/containers/inner-bg__bottom.svg") 3;
 }
 
 .bottom-box {
-	padding: 0 10px;
-	spacing: 0;
+	padding: 8px 11px 10px;
 
 	&:last-child {
-		spacing: 0;
-		padding: 10px;
-		padding-top: 6px;
+		padding: 10px + 1;
+		border-image: url("img/containers/modal-button-box.svg") 3;
 	}
 }
 

@@ -3,22 +3,24 @@
  * ====================================== */
 
 .reddit-reader {
-	border-image: url("img/containers/popup.svg") 9;
-	padding: 8px;
+	@include colored-element;
 	color: $text-primary;
 
-	StScrollBar { padding: 0; }
+	StScrollView {
+		border-image: url("img/containers/inner-bg__top.svg") 3;
+		padding: 0 1px 1px;
+	}
 }
 
 /* Title */
 .reddit-title-bar {
-	background: none;
-	padding: 10px 10px 10px 16px;
+	border-image: url("img/containers/menu-search.svg") 3;
+	padding: 10px;
 	font-size: $font-size-lg;
 	font-weight: normal;
 
 	.reddit-header-icon {
-		padding-right: 8px;
+		padding: 0 8px;
 		icon-size: 16px;
 		color: $text-secondary;
 	}
@@ -35,8 +37,7 @@
 
 /* Posts */
 .reddit-posts-box {
-	spacing: 4px;
-	padding: 0 10px;
+	padding: 0 4px;
 }
 
 .reddit-post {
@@ -48,7 +49,6 @@
 
 	&:hover {
 		color: $text-link;
-		//border-image: url("img/containers/hover.svg") 9;
 	}
 }
 

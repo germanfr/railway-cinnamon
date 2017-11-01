@@ -3,6 +3,6 @@
  * ====================================== */
 
 .photoframe-box {
-	border-image: url("img/containers/colored-bg.svg") 9;
-	padding: 8px;
+	@include colored-element;
+	border-radius: 0;
 }

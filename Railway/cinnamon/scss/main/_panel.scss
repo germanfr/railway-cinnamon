@@ -6,9 +6,14 @@ $panel-width: 40px;
 
 @each $pos in top, bottom, left, right {
 	.panel-#{$pos} {
-		border-image: url("img/panel/panel-#{$pos}.svg") 10;
 		font-size: $font-size-base;
 		@include size($panel-width, $panel-height);
+		background-color: $accent-element-panel;
+
+		// Style here because border-image and backgrounds are incompatible
+		.panelLeft, .panelCenter, .panelRight {
+			border-image: url("img/panel/panel-#{$pos}.svg") 3;
+		}
 
 		&:highlight {
 			.panelLeft, .panelCenter, .panelRight {

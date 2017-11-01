@@ -6,27 +6,26 @@
 	color: $text-primary-invert;
 
 	&-with-borders {
-		border-image: url("img/containers/colored-bg.svg") 9;
-		color: $text-primary-invert;
+		@include colored-element;
+		color: $text-primary-contrast;
 		text-shadow: none;
-		padding: 8px;
 	}
 
 	&-with-borders-and-header {
-		border-image: url("img/containers/colored-bg__top.svg") 9;
-		color: $text-primary-invert;
+		@include colored-element;
+		border-top: none;
+		color: $text-primary-contrast;
 		text-shadow: none;
-		padding: 8px;
 	}
 
 	&-header {
-		border-image: url("img/containers/colored-bg__bottom.svg") 9;
-		color: $text-primary-invert;
+		@include colored-element;
+		border-bottom: none;
+		color: $text-primary-contrast;
 		text-shadow: none;
-		padding: 8px;
 
 		padding-bottom: 0;
-		font-size: $font-size-lg;
+		font-size: $font-size-xl;
 		font-weight: normal;
 	}
 

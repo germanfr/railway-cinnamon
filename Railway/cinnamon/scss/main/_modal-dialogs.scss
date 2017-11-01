@@ -15,20 +15,17 @@
  * ====================================== */
 
 .modal-dialog {
-	border-radius: 0;
-	padding: 8px;
 	color: $text-primary;
-	border-image: url("img/containers/popup.svg") 10;
+	@include colored-element;
 
 	> * {
-		padding: 10px;
-		border-radius: 0;
+		border-image: url("img/containers/inner-bg__bottom.svg") 3;
 	}
 
 	&-button-box {
-		border-image: url("img/containers/modal-button-box.svg") 10;
+		border-image: url("img/containers/modal-button-box.svg") 3;
 		spacing: 0;
-		padding: 11px 10px 10px;
+		padding: 11px;
 	}
 
 	&-button {
@@ -43,12 +40,10 @@
 
 .run-dialog {
 
-	padding: 8px;
-
 	> * {
-		background-color: #F0F0F0;
+		border-image: url("img/containers/inner-bg-dark.svg") 3;
 		spacing: 10px;
-		padding: 10px;
+		padding: 10px + 1;
 	}
 
 	> .modal-dialog-button-box {
@@ -60,17 +55,16 @@
 
 	&-error-box {
 		padding: 0;
-		spacing: 1em;
+		spacing: 6px;
 		color: $text-danger;
+	}
 
-		StIcon {
-			@include size(16px);
-			color: $accent-danger;
-		}
+	&-error-icon {
+		color: $text-danger;
 	}
 
 	&-completion-box {
-		border-image: url("img/containers/inner-bg.svg") 10;
+		border-image: url("img/containers/inner-bg.svg") 3;
 		font-size: $font-size-base;
 		padding: 1em .7em 0;
 		color: $text-primary;
@@ -88,13 +82,13 @@
 	width: 550px;
 	height: 250px;
 	spacing: 16px;
-	padding: 8px;
+	padding: 16px + 1;
 }
 
 .about-icon {
 	color: $text-primary;
-	border-image: url("img/containers/inner-bg-dark.svg") 10;
-	padding: 8px;
+	border-image: url("img/containers/inner-bg-dark.svg") 3;
+	padding: 7px;
 }
 
 .about-title {

@@ -15,7 +15,7 @@ or/* ======================================
 
 /* This is pretty much only used by the keyboard applet */
 .panel-status-button {
-	color: $text-primary-invert;
+	color: $text-primary-contrast;
 
 	.panel-top &, .panel-bottom & { padding: 0 2px; }
 
@@ -27,7 +27,7 @@ or/* ======================================
 }
 
 .applet-label {
-	color: $text-primary-invert;
+	color: $text-primary-contrast;
 }
 
 .applet-separator {
@@ -35,19 +35,19 @@ or/* ======================================
 	.panel-left &, .panel-right & { padding: 7px 0; }
 
 	&-line {
-		background-color: $border-shape;
+		background-color: $border-element;
 		width: 1px;
 	}
 
 	&-line-vertical {
-		border: 0 $border-shape;
+		border: 0 $border-element;
 		border-bottom-width: 1px;
 	}
 }
 
 .applet-box {
 	padding: 0 6px;
-	color: $text-primary-invert;
+	color: $text-primary-contrast;
 
 	&:hover {
 		border-image: url("img/panel/applet__horizontal__hover.svg") 10;

@@ -5,3 +5,9 @@
 	width: $width $important;
 	height: $height $important;
 }
+
+@mixin colored-element {
+	background-color: $accent-element;
+	border: 1px solid $border-element;
+	padding: 6px;
+}

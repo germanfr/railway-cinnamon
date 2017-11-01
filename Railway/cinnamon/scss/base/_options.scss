@@ -1,1 +1,15 @@
-$menu-style: "railway"
+/* Menu style
+ * common: like any other popup menus
+ * default: a more stylized menu
+ */
+$menu-style: "default";
+
+/* Main theme color.
+ * Comment/uncomment to change it or add your own.
+ */
+$theme-color: #4a85c6;		// Blue
+//$theme-color: #5abb8c;	// Green
+//$theme-color: #212121;	// Black
+
+/* Whether to have opaque menus or not */
+$opaque-menus: false;

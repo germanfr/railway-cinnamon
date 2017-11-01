@@ -3,10 +3,10 @@
  * ====================================== */
 
 @if variable-exists(menu-style)
-	and $menu-style == "default" {
+	and $menu-style == "common" {
 	.menu-background.menu {
 		.popup-menu-content {
-			padding: 8px 8px 18px;
+			padding: 0 0 7px;
 		}
 
 		.menu-applications-outer-box { spacing: 0; }
@@ -28,11 +28,11 @@
 }
 @else {
 	.menu-background.menu {
-		padding: 0;
+		margin: 0;
 
 		.popup-menu-content {
-			border-image: url("img/containers/colored-bg.svg") 8;
-			padding: 8px;
+			padding: 0;
+			border-image: none;
 		}
 	}
 }
@@ -94,11 +94,10 @@
 
 	.menu-applications-inner-box {
 		padding: 8px 0;
-
 	}
 
-	StScrollView {
-		padding: 0 1px 1px;
+	.menu-applications-scrollbox {
+		padding: 0 1px 1px 0;
 		border-image: url("img/containers/menu-apps.svg") 8;
 	}
 }
@@ -122,17 +121,17 @@
 }
 
 .menu-selected-app-box {
-	padding: 8px;
+	margin: 8px 8px 0;
 	text-align: right;
 }
 
 .menu-selected-app-title {
-	color: $text-primary-invert;
+	color: $text-primary-contrast;
 }
 
 .menu-selected-app-description {
 	max-width: 150px;
-	color: $text-secondary-invert;
+	color: $text-secondary-contrast;
 }
 
 .menu-search-box {

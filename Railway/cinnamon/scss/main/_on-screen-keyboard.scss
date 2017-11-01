@@ -3,16 +3,16 @@
  * ====================================== */
 
 #keyboard {
-	border-image: url("img/containers/sound-applet-overlay-bg.svg") 7;
+	border-image: url("img/containers/sound-applet-overlay-bg.svg") 3;
 }
 
 .keyboard-layout {
-	spacing: 5px;
-	padding: 8px;
+	spacing: 6px; // Space between rows
+	padding: 10px + 1;
 }
 
 .keyboard-row {
-	spacing: 5px;
+	spacing: 4px; // Horizontal space between keys
 }
 
 .keyboard-key {
@@ -24,6 +24,5 @@
 
 /* Appears when long-pressing certain keys */
 .keyboard-subkeys {
-	padding: 10px;
-	border-image: url("img/containers/popup.svg") 10;
+	border-image: url("img/containers/tooltip.svg") 10;
 }
