@@ -1976,17 +1976,6 @@ or .applet-icon,
 }
 
 /* ======================================
- * ! Hot corners icons
- * ====================================== */
-#overview-corner {
-  background-image: url("img/misc/overview.png");
-}
-
-#overview-corner:hover {
-  background-image: url("img/misc/overview-hover.png");
-}
-
-/* ======================================
  * ! Hot corner ripple
  * ====================================== */
 .ripple-box {
