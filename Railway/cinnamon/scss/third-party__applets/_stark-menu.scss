@@ -83,7 +83,7 @@
 	}
 
 	.right-buttons-box {
-		padding: 0;
+		padding-left: 6px;
 		color: $text-primary-contrast;
 
 		.menu-category-button {
@@ -101,15 +101,10 @@
 			padding: 2px;
 		}
 
-		.starkhover-box {
-			// Shutdown dropdown menu (it has no class name)
-			StBin:last-child { border-image: none; }
-
-			.popup-menu-item {
-				color: $text-primary-invert;
-				&:active {
-					border-image: url("img/containers/hover-transparent.svg") 10;
-				}
+		.starkhover-box .popup-menu-item {
+			color: $text-primary-contrast;
+			&:active {
+				border-image: url("img/containers/hover-transparent.svg") 3;
 			}
 		}
 	}

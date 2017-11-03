@@ -2861,7 +2861,7 @@ or .applet-icon,
 }
 
 .starkmenu-background .right-buttons-box {
-  padding: 0;
+  padding-left: 6px;
   color: white;
 }
 
@@ -2880,16 +2880,12 @@ or .applet-icon,
   padding: 2px;
 }
 
-.starkmenu-background .right-buttons-box .starkhover-box StBin:last-child {
-  border-image: none;
-}
-
 .starkmenu-background .right-buttons-box .starkhover-box .popup-menu-item {
   color: white;
 }
 
 .starkmenu-background .right-buttons-box .starkhover-box .popup-menu-item:active {
-  border-image: url("img/containers/hover-transparent.svg") 10;
+  border-image: url("img/containers/hover-transparent.svg") 3;
 }
 
 .starkmenu-search-box {
