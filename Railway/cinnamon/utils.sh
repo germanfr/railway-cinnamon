@@ -8,10 +8,9 @@ theme='Railway'
 theme_dir=~/'.themes'
 
 sass_input='scss/cinnamon.scss'
-
 sass_output='cinnamon.css'
-
 sass_style='expanded'
+sass_optfile='scss/base/_options.scss'
 
 assets_dir='img'
 
@@ -35,7 +34,7 @@ package_files=(
 extra_files=(
     'LICENSE'
     'README.md'
-	'screenshot.png'
+    'screenshot.png'
 )
 
 # ======================================
@@ -46,26 +45,52 @@ compile_sass () {
 }
 
 restart_theme () {
+    gsettings set org.cinnamon.theme name 'cinnamon'
     gsettings set org.cinnamon.theme name "$theme"
 }
 
 symlink_theme () {
-    mkdir -p "$theme_dir"
-    rm -rf "$theme_dir/$theme"
-    ln -rfs "../../$theme" "$theme_dir"
+    if [ $(pwd) != "$theme_dir/$theme/cinnamon" ]; then
+        mkdir -p "$theme_dir"
+        rm -rf "$theme_dir/$theme"
+        ln -rfs "../../$theme" "$theme_dir"
+    fi
+}
+
+# Set variable color in the options file (sass)
+set_color () {
+    local varname="$1"
+    local new_color="$2"
+
+    if [[ $new_color =~ [0-9a-fA-F]{6} ]]
+    then
+        sed -i "s/\$$varname:.*;/\$$varname: #$new_color;/g" "$sass_optfile"
+    else
+        echo "$new_color is not a valid hexadecimal color. See --help."
+        exit 1;
+    fi
+}
+
+compile_theme () {
+    if [ ! -z "$2" ]; then set_color 'theme-color' $2; fi
+    compile_sass
 }
 
 install_theme () {
-    spices_package &> /dev/null
-    mkdir -p "$theme_dir"
-    rm -rf "$theme_dir/$theme"
-    unzip "$zip_name" -d "$theme_dir"
+    # In case the script is run from the theme folder itself
+    if [ $(pwd) != "$theme_dir/$theme/cinnamon" ]; then
+        spices_package &> /dev/null
+        mkdir -p "$theme_dir"
+        rm -rf "$theme_dir/$theme"
+        unzip $zip_name -d "$theme_dir"
+        rm $zip_name
+    fi
 
-	restart_theme
+    restart_theme
 }
 
 spices_package () {
-	if type sassc ;then compile_sass ;fi
+    if type sassc; then compile_sass; fi
 
     cd ../../
     rm -f "$zip_name"
@@ -128,17 +153,17 @@ simplify_assets () {
 
 watch_files () {
     symlink_theme
-	echo 'Started watching files (Ctrl+C to exit)'
-    while
+    echo 'Started watching files (Ctrl+C to exit)'
+    while true; do
         compile_sass
         restart_theme
         notify-send "Theme $theme reloaded" \
             --icon='preferences-desktop-theme' \
             --hint=int:transient:1
 
-        # test
+        # Wait until any file changes
         inotifywait --format '%T > %e %w%f' --timefmt '%H:%M:%S' -qre modify "${watch_dirs[@]}"
-    do :; done
+    done
 }
 
 show_help () {
@@ -150,19 +175,20 @@ ${bold}USAGE${normal}
     ./$(basename $0) --OPTION
 
 ${bold}OPTIONS${normal}
-    --install       install the theme into the system
+  --install         Install the theme into the system.
 
 ${bold}DEVELOPMENT OPTIONS${normal}
-    --compile       convert SASS files into CSS
+  --compile [COLOR] Convert SASS files into CSS.
+                    COLOR: provide a theme color (optional).
 
-    --pkg           package files ready to be uploaded to the Cinnamon Spices
+  --pkg             Package files ready to be uploaded to the Cinnamon Spices.
 
-    --simplify      optimize SVG assets for a smaller size and a better theme
-                    performance stripping metadata and other stuff
+  --simplify        Optimize SVG assets for a smaller size and a better theme
+                    performance stripping metadata and other stuff.
 
-    --watch         refresh the theme while making changes to files and images
+  --watch           Refresh the theme while making changes to files and images.
 
-    --help          show help
+  --help            Show help.
 "
 }
 
@@ -172,7 +198,7 @@ ${bold}DEVELOPMENT OPTIONS${normal}
 
 declare -A operations
 operations[install]=install_theme
-operations[compile]=compile_sass
+operations[compile]=compile_theme
 operations[help]=show_help
 operations[pkg]=spices_package
 operations[simplify]=simplify_assets
@@ -184,7 +210,7 @@ then
     opfunc="${operations[$opname]}"
 
     if [[ -n "$opfunc" ]]
-    then $opfunc
+    then $opfunc "$@"
     else
         echo "$opname: command not found"
         show_help
