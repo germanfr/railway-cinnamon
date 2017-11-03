@@ -6,15 +6,15 @@
 	and $menu-style == "common" {
 	.menu-background.menu {
 		.popup-menu-content {
-			padding: 0 0 7px;
+			padding: 0 0 6px;
 		}
 
 		.menu-applications-outer-box { spacing: 0; }
 
-		.menu-favorites-box { padding: 8px; }
+		.menu-favorites-box { padding: 6px; }
 
 		.menu-favorites-button:hover {
-			border-image: url("img/containers/hover.svg") 8;
+			border-image: url("img/containers/hover.svg") 3;
 		}
 
 		.menu-selected-app-title {
@@ -90,7 +90,7 @@
 
 
 .menu-applications-outer-box {
-	spacing: 8px;
+	spacing: 7px;
 
 	.menu-applications-inner-box {
 		padding: 8px 0;
@@ -121,7 +121,7 @@
 }
 
 .menu-selected-app-box {
-	margin: 8px 8px 0;
+	margin: 6px 6px 0;
 	text-align: right;
 }
 

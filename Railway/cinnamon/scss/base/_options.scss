@@ -4,12 +4,8 @@
  */
 $menu-style: "default";
 
-/* Main theme color.
- * Comment/uncomment to change it or add your own.
- */
-$theme-color: #4a85c6;		// Blue
-//$theme-color: #5abb8c;	// Green
-//$theme-color: #212121;	// Black
+/* Main theme color */
+$theme-color: #4a85c6;	// Default: #4a85c6
 
-/* Whether to have opaque menus or not */
+/* Whether to have opaque or traslucent menus */
 $opaque-menus: false;

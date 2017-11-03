@@ -2,10 +2,8 @@
  * common: like any other popup menus
  * default: a more stylized menu
  */
-/* Main theme color.
- * Comment/uncomment to change it or add your own.
- */
-/* Whether to have opaque menus or not */
+/* Main theme color */
+/* Whether to have opaque or traslucent menus */
 /* ======================================
  * ! Font
  * ====================================== */
@@ -1916,7 +1914,7 @@ or .applet-icon,
 }
 
 .menu-applications-outer-box {
-  spacing: 8px;
+  spacing: 7px;
 }
 
 .menu-applications-outer-box .menu-applications-inner-box {
@@ -1951,7 +1949,7 @@ or .applet-icon,
 }
 
 .menu-selected-app-box {
-  margin: 8px 8px 0;
+  margin: 6px 6px 0;
   text-align: right;
 }
 
