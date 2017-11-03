@@ -323,7 +323,7 @@ StScrollBar StButton#hhandle:active {
  * ! Popup Menus
  * ====================================== */
 .menu {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   margin: 4px;
@@ -606,7 +606,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .desklet-with-borders {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   color: white;
@@ -614,7 +614,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .desklet-with-borders-and-header {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   border-top: none;
@@ -623,7 +623,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .desklet-header {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   border-bottom: none;
@@ -650,7 +650,7 @@ StScrollBar StButton#hhandle:active {
  * ! Photoframe
  * ====================================== */
 .photoframe-box {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   border-radius: 0;
@@ -1037,7 +1037,7 @@ StScrollBar StButton#hhandle:active {
  * ====================================== */
 .modal-dialog {
   color: rgba(0, 0, 0, 0.75);
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
 }
@@ -1534,7 +1534,7 @@ or .applet-icon,
  * anywhere else as the direct child of '#uiGroup'.
  */
 #uiGroup > .switcher-list {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   color: white;
@@ -2779,7 +2779,7 @@ or .applet-icon,
  * ! Stark menu applet
  * ====================================== */
 .starkmenu-background {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   margin: 0;
@@ -3065,7 +3065,7 @@ or .applet-icon,
  * ! Reddit reader
  * ====================================== */
 .reddit-reader {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   color: rgba(0, 0, 0, 0.75);
@@ -3138,7 +3138,7 @@ or .applet-icon,
  * ! G-tile
  * ====================================== */
 .grid-panel {
-  background-color: rgba(74, 133, 198, 0.9);
+  background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   width: 220px;
