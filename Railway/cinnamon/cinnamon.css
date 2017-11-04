@@ -2071,7 +2071,7 @@ or .applet-icon,
  * ====================================== */
 /* Overrides the '.menu' selector */
 .weather-menu .popup-menu-content {
-  padding-bottom: 8px;
+  padding: 1px;
 }
 
 .weather-menu .popup-separator-menu-item {
@@ -2085,7 +2085,7 @@ or .applet-icon,
 }
 
 .current {
-  padding: 10px 16px;
+  padding: 16px;
 }
 
 .current * {
@@ -2140,7 +2140,7 @@ or .applet-icon,
 
 .forecast {
   padding: .8em;
-  border-image: url("img/containers/modal-button-box.svg") 8;
+  border-image: url("img/containers/menu-search__bottom.svg") 3;
 }
 
 .weather-forecast-icon {
