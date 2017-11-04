@@ -26,10 +26,12 @@ $panel-width: 40px;
 /* Panel edit mode */
 .panelLeft:dnd,
 .panelRight:dnd {
+	border-image: none;
 	background-color: rgba($accent-hlight, .5);
 }
 
 .panelCenter:dnd {
+	border-image: none;
 	background-color: rgba($accent-danger, .5);
 }
 

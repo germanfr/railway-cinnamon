@@ -494,10 +494,12 @@ StScrollBar StButton#hhandle:active {
 /* Panel edit mode */
 .panelLeft:dnd,
 .panelRight:dnd {
+  border-image: none;
   background-color: rgba(255, 190, 0, 0.5);
 }
 
 .panelCenter:dnd {
+  border-image: none;
   background-color: rgba(237, 93, 93, 0.5);
 }
 
