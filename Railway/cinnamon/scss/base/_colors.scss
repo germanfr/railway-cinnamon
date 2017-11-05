@@ -17,7 +17,7 @@ $text-disabled-invert:  rgba(#fff, .30);
 
 $text-primary-contrast: $text-primary-invert;
 $text-secondary-contrast: $text-secondary-invert;
-@if(lightness($theme-color) > 60) {
+@if(lightness($theme-color) > 55) {
 	$text-primary-contrast: $text-primary;
 	$text-secondary-contrast: $text-secondary;
 }
