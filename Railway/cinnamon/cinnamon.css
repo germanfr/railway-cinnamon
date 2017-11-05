@@ -1046,6 +1046,7 @@ StScrollBar StButton#hhandle:active {
 
 .modal-dialog > * {
   border-image: url("img/containers/inner-bg__bottom.svg") 3;
+  padding: 17px;
 }
 
 .modal-dialog-button-box {
@@ -1175,7 +1176,6 @@ StScrollBar StButton#hhandle:active {
   width: 550px;
   height: 250px;
   spacing: 16px;
-  padding: 17px;
 }
 
 .about-icon {

@@ -20,6 +20,7 @@
 
 	> * {
 		border-image: url("img/containers/inner-bg__bottom.svg") 3;
+		padding: 16px + 1;
 	}
 
 	&-button-box {
@@ -82,7 +83,6 @@
 	width: 550px;
 	height: 250px;
 	spacing: 16px;
-	padding: 16px + 1;
 }
 
 .about-icon {
