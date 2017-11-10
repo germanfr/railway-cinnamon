@@ -832,17 +832,16 @@ StScrollBar StButton#hhandle:active {
  * ! Notification applet
  * ====================================== */
 #traycontainer {
-  padding-left: 10px;
   max-height: 48em;
 }
 
 #traycontainer .notification-applet-padding {
-  padding: .4em 0;
+  padding: 6px;
 }
 
 #traycontainer #notification {
   border-image: url("img/containers/inner-bg-dark.svg") 7;
-  padding: .8em;
+  padding: 8px;
 }
 
 #traycontainer #notification, #traycontainer #notification * {

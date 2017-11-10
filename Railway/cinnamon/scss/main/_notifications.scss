@@ -67,14 +67,13 @@
  * ====================================== */
 
 #traycontainer {
-	padding-left: 10px;
 	max-height: 48em; // should be fixed by cinnamon
 
-	.notification-applet-padding { padding: .4em 0; }
+	.notification-applet-padding { padding: 6px; }
 
 	#notification {
 		border-image: url("img/containers/inner-bg-dark.svg") 7;
-		padding: .8em;
+		padding: 8px;
 
 		&, * { color: $text-primary; }
 	}
