@@ -80,8 +80,8 @@
  * ====================================== */
 
 .about-content {
-	width: 550px;
-	height: 250px;
+	min-width: 360px;
+	max-width: 520px;
 	spacing: 16px;
 }
 
