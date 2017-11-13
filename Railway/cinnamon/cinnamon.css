@@ -378,18 +378,9 @@ StScrollBar StButton#hhandle:active {
 
 .popup-menu-arrow {
   icon-size: 13px;
-  width: 10px;
-  height: 10px;
-  padding: 0 4px 2px 0;
+  width: 13px;
+  height: 13px;
   color: rgba(0, 0, 0, 0.75);
-}
-
-.popup-submenu-menu-item:open {
-  background-color: transparent;
-}
-
-.popup-submenu-menu-item:open .popup-menu-arrow {
-  padding: 0 4px 2px 0;
 }
 
 .popup-separator-menu-item {
