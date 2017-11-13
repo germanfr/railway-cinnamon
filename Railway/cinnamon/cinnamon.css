@@ -327,13 +327,13 @@ StScrollBar StButton#hhandle:active {
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   margin: 4px;
-  min-width: 100px;
 }
 
 .popup-menu-content {
   color: rgba(0, 0, 0, 0.75);
   border-image: url("img/containers/inner-bg.svg") 3;
   padding: 7px 1px;
+  min-width: 64px;
 }
 
 .popup-menu-icon {

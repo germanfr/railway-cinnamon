@@ -5,13 +5,13 @@
 .menu {
 	@include colored-element;
 	margin: 4px;
-	min-width: 100px;
 }
 
 .popup-menu-content {
 	color: $text-primary;
 	border-image: url("img/containers/inner-bg.svg") 3;
 	padding: 7px 1px;
+	min-width: 64px;
 }
 
 .popup-menu-icon {
