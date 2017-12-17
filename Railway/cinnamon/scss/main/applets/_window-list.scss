@@ -32,6 +32,10 @@
 	&:active, &:checked, &:focus  {
 		border-image: url("img/panel/window-list__active.svg") 8;
 	}
+
+	.progress {
+		border-image: url("img/panel/window-list__progress.svg") 8;
+	}
 }
 
 .window-list-item-demands-attention {
