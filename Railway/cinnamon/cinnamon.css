@@ -1353,6 +1353,7 @@ or .applet-icon,
 .applet-box {
   padding: 0 6px;
   color: white;
+  spacing: 4px;
 }
 
 .applet-box:hover {

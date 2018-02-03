@@ -48,6 +48,7 @@ or/* ======================================
 .applet-box {
 	padding: 0 6px;
 	color: $text-primary-contrast;
+	spacing: 4px;
 
 	&:hover {
 		border-image: url("img/panel/applet__horizontal__hover.svg") 10;
