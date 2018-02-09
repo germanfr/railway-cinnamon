@@ -11,3 +11,7 @@
 	border: 1px solid $border-element;
 	padding: 6px;
 }
+
+@function normalized-lightness($bg) {
+	@return (0.299 * red($bg) + 0.587 * green($bg) + 0.114 * blue($bg)) / 255;
+}
