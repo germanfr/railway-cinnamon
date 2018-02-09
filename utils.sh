@@ -5,7 +5,7 @@
 # ======================================
 theme='Railway'
 
-theme_dir=~/'.themes'
+theme_dir="$HOME/.themes"
 
 sass_input='scss/cinnamon.scss'
 sass_output='cinnamon.css'
@@ -50,11 +50,9 @@ restart_theme () {
 }
 
 symlink_theme () {
-    if [ $(pwd) != "$theme_dir/$theme/cinnamon" ]; then
-        mkdir -p "$theme_dir"
-        rm -rf "$theme_dir/$theme"
-        ln -rfs "../../$theme" "$theme_dir"
-    fi
+    mkdir -p "$theme_dir"
+    rm -rf "$theme_dir/$theme"
+    ln -rfs "$theme" "$theme_dir/"
 }
 
 # Set variable color in the options file (sass)
@@ -72,27 +70,28 @@ set_color () {
 }
 
 compile_theme () {
-    if [ ! -z "$2" ]; then set_color 'theme-color' $2; fi
+    local color="$2"
+    cd "$theme/cinnamon/"
+    if [[ $color =~ [A-Fa-f0-9]{6} ]]; then set_color 'theme-color' $color; fi
     compile_sass
 }
 
 install_theme () {
-    # In case the script is run from the theme folder itself
-    if [ $(pwd) != "$theme_dir/$theme/cinnamon" ]; then
-        spices_package &> /dev/null
-        mkdir -p "$theme_dir"
-        rm -rf "$theme_dir/$theme"
-        unzip $zip_name -d "$theme_dir"
-        rm $zip_name
-    fi
+    spices_package &> /dev/null
+    mkdir -p "$theme_dir"
+    rm -rf "$theme_dir/$theme"
+    pwd
+    unzip $zip_name -d "$theme_dir"
+    rm $zip_name
 
     restart_theme
 }
 
 spices_package () {
-    if type sassc; then compile_sass; fi
+    if type sassc; then
+        (cd "$theme/cinnamon/" && compile_sass)
+    fi
 
-    cd ../../
     rm -f "$zip_name"
     zip -r "$zip_name" "${package_files[@]}"
 
@@ -110,12 +109,13 @@ simplify_assets () {
         scour -i "$1" -o "$2"\
             --remove-metadata \
             --enable-id-stripping \
-            --protect-ids-noninkscape
+            --protect-ids-noninkscape \
+            --disable-simplify-colors
     }
 
     # Usage: print_progress PROGRESS TOTAL
     print_progress () {
-        local n_cols=$(($(tput cols)-5))
+        local n_cols=$(($(tput cols)-7))
         local cols_completed=$(($1*n_cols/$2))
         local percent_completed=$(($1*100/$2))
 
@@ -124,6 +124,8 @@ simplify_assets () {
             echo -n '#'
         }
     }
+
+    cd "$theme/cinnamon/"
 
     if type scour &> /dev/null ; then
 
@@ -153,13 +155,14 @@ simplify_assets () {
 
 watch_files () {
     symlink_theme
+    cd "$theme/cinnamon/"
     echo 'Started watching files (Ctrl+C to exit)'
     while true; do
         compile_sass
         restart_theme
         notify-send "Theme $theme reloaded" \
             --icon='preferences-desktop-theme' \
-            --hint=int:transient:1
+            --hint=int:transient:1 &> /dev/null
 
         # Wait until any file changes
         inotifywait --format '%T > %e %w%f' --timefmt '%H:%M:%S' -qre modify "${watch_dirs[@]}"
