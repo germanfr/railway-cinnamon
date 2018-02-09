@@ -60,24 +60,23 @@ set_color () {
     local varname="$1"
     local new_color="$2"
 
-    if [[ $new_color =~ [0-9a-fA-F]{6} ]]
+    if [[ $new_color =~ ^[0-9a-fA-F]{6}$ ]]
     then
         sed -i "s/\$$varname:.*;/\$$varname: #$new_color;/g" "$sass_optfile"
     else
         echo "$new_color is not a valid hexadecimal color. See --help."
-        exit 1;
+        return 1;
     fi
 }
 
 compile_theme () {
-    local color="$2"
     cd "$theme/cinnamon/"
-    if [[ $color =~ [A-Fa-f0-9]{6} ]]; then set_color 'theme-color' $color; fi
+    if [ ! -z $2 ]; then set_color 'theme-color' $2; fi && \
     compile_sass
 }
 
 install_theme () {
-    spices_package &> /dev/null
+    package_theme &> /dev/null
     mkdir -p "$theme_dir"
     rm -rf "$theme_dir/$theme"
     pwd
@@ -87,7 +86,7 @@ install_theme () {
     restart_theme
 }
 
-spices_package () {
+package_theme () {
     if type sassc; then
         (cd "$theme/cinnamon/" && compile_sass)
     fi
@@ -102,6 +101,41 @@ spices_package () {
     done
 
     echo "Files compressed into $zip_name"
+}
+
+package_all () {
+    local out="build"
+    mkdir -p $out && rm -rf "$out/*"
+
+    # Compile original first but move it because all unzip to that same folder
+    package_theme > /dev/null
+    unzip -q "$zip_name" -d build
+    mv "$out/$theme" "$out/$theme-original"
+
+    while read -p "Input a color (Ctrl+D to exit): " color; do
+        cd "$theme/cinnamon/"
+        set_color 'theme-color' $color || { cd ../../ && break; }
+        compile_sass
+        cd ../../
+        package_theme > /dev/null
+        unzip -q "$zip_name" -d $out
+        mv "$out/$theme" "$out/$theme-$color"
+    done
+    mv "$out/$theme-original" "$out/$theme"
+
+    rm -f "$zip_name"
+    cd $out/
+    zip -r "$zip_name" ./*
+    mv "$zip_name" ../
+    rm -rf ../$out
+}
+
+spices_package () {
+    if [ $2 == "all" ]; then
+        package_all
+    else
+        package_theme
+    fi
 }
 
 simplify_assets () {
@@ -184,7 +218,8 @@ ${bold}DEVELOPMENT OPTIONS${normal}
   --compile [COLOR] Convert SASS files into CSS.
                     COLOR: provide a theme color (optional).
 
-  --pkg             Package files ready to be uploaded to the Cinnamon Spices.
+  --pkg [all]       Package files ready to be uploaded to the Cinnamon Spices.
+                    Add 'all' to generate all the color variants provided.
 
   --simplify        Optimize SVG assets for a smaller size and a better theme
                     performance stripping metadata and other stuff.
