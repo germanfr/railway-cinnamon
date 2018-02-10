@@ -2905,7 +2905,7 @@ or .applet-icon,
  * ====================================== */
 .calc-mainBox {
   padding: 0;
-  spacing: 7px;
+  spacing: 6px;
 }
 
 .calc-displayArea {
@@ -2976,81 +2976,18 @@ or .applet-icon,
 }
 
 .calc-button {
-  background-color: transparent;
-  background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
-  border: none;
-  border-width: 0;
-  border-radius: 0;
-  font-size: 92%;
-  border-image: url("img/buttons/button-primary__s.svg") 10;
-  color: rgba(0, 0, 0, 0.75);
-  font-weight: normal;
-  width: 3.8em;
-  height: 3em;
-}
-
-.calc-button StIcon {
-  icon-size: 16px !important;
-}
-
-.calc-button StIcon {
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:hover {
-  border-image: url("img/buttons/button-primary__s--hover.svg") 10;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:hover StIcon {
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:active, .calc-button:pressed, .calc-button:activate, .calc-button:checked, .calc-button:selected {
-  border-image: url("img/buttons/button-primary__s--pressed.svg") 10;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:active StIcon, .calc-button:pressed StIcon, .calc-button:activate StIcon, .calc-button:checked StIcon, .calc-button:selected StIcon {
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:focus {
-  border-image: url("img/buttons/button-selected__s.svg") 10;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:focus StIcon {
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:focus:hover {
-  border-image: url("img/buttons/button-selected__s--hover.svg") 10;
-}
-
-.calc-button:focus:active, .calc-button:focus:pressed, .calc-button:focus:activate, .calc-button:focus:checked, .calc-button:focus:selected {
-  border-image: url("img/buttons/button-selected__s--pressed.svg") 10;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:focus:active StIcon, .calc-button:focus:pressed StIcon, .calc-button:focus:activate StIcon, .calc-button:focus:checked StIcon, .calc-button:focus:selected StIcon {
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.calc-button:grayed, .calc-button:disabled, .calc-button:insensitive, .calc-button:focus:grayed, .calc-button:focus:disabled, .calc-button:focus:insensitive {
-  border-image: url("img/buttons/button-primary__s.svg") 10;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.calc-button:grayed StIcon, .calc-button:disabled StIcon, .calc-button:insensitive StIcon, .calc-button:focus:grayed StIcon, .calc-button:focus:disabled StIcon, .calc-button:focus:insensitive StIcon {
-  color: rgba(0, 0, 0, 0.2);
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  border-image: url("img/containers/hover-transparent.svg") 9;
 }
 
 .calc-button-padding {
-  padding: .1em;
+  padding: 0px;
+}
+
+.calc-button StIcon {
+  color: white;
 }
 
 /* ======================================
