@@ -16,6 +16,7 @@
 
 .modal-dialog {
 	color: $text-primary;
+	font-size: $font-size-base;
 	@include colored-element;
 
 	> * {
@@ -31,7 +32,8 @@
 
 	&-button {
 		@include btn-primary;
-		@include btn-size(wide);
+		@include btn-size("wide");
+		font-size: round($font-size-base*1.05);
 	}
 }
 

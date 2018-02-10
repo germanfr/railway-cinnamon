@@ -1,5 +1,5 @@
 // Standard font sizes
-$font-size-base: 11px;
+$font-size-base: 92%;	// 12px * 0.92 = 11px
 
 $font-size-mega: round($font-size-base*6);
 $font-size-xxxl: round($font-size-base*2.5);
