@@ -43,8 +43,6 @@
 
 .capture-countdown-timer {
 	border-image: url("img/containers/tile-bg.svg") 7;
-	@include size($font-size-xxxl);
-	font-size: $font-size-xxxl;
 	font-weight: normal;
 	text-align: center;
 	color: $text-primary-invert;

@@ -6,8 +6,13 @@
 	spacing: 2px;
 	padding: 0;
 
+	.window-list-item-box { padding: 0 4px 0 0; }
 	#appMenuIcon { padding: 0 0 0 8px; }
-	&.vertical #appMenuIcon { padding: 8px 0 0 0; }
+
+	&.vertical {
+		.window-list-item-box { padding: 0; }
+		#appMenuIcon { padding: 8px 0 0 0; }
+	}
 }
 
 .window-list-item-box {

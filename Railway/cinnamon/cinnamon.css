@@ -1483,8 +1483,16 @@ or .applet-icon,
   padding: 0;
 }
 
+.window-list-box .window-list-item-box {
+  padding: 0 4px 0 0;
+}
+
 .window-list-box #appMenuIcon {
   padding: 0 0 0 8px;
+}
+
+.window-list-box.vertical .window-list-item-box {
+  padding: 0;
 }
 
 .window-list-box.vertical #appMenuIcon {
@@ -2688,9 +2696,6 @@ or .applet-icon,
 
 .capture-countdown-timer {
   border-image: url("img/containers/tile-bg.svg") 7;
-  width: 230%;
-  height: 230%;
-  font-size: 230%;
   font-weight: normal;
   text-align: center;
   color: white;
