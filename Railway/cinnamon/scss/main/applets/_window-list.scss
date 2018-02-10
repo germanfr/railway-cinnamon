@@ -6,19 +6,15 @@
 	spacing: 2px;
 	padding: 0;
 
-	.window-list-item-box { padding: 0 4px 0 0; }
 	#appMenuIcon { padding: 0 0 0 8px; }
-
-	&.vertical {
-		.window-list-item-box { padding: 0; }
-		#appMenuIcon { padding: 8px 0 0 0; }
-	}
+	&.vertical #appMenuIcon { padding: 8px 0 0 0; }
 }
 
 .window-list-item-box {
 	color: $text-primary-contrast;
 	border-image: url("img/panel/window-list.svg") 8;
 	text-shadow: 0px 0px 4px 4px rgba(#000, .2);
+	padding: 0;
 
 	background-gradient-direction: vertical;
 	background-gradient-start: transparent;
