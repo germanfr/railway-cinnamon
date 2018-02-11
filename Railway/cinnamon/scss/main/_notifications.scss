@@ -74,6 +74,7 @@
 	#notification {
 		border-image: url("img/containers/inner-bg-dark.svg") 7;
 		padding: 8px;
+		font-size: 100%;
 
 		&, * { color: $text-primary; }
 	}

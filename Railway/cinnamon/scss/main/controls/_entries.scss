@@ -3,7 +3,7 @@
 	color: $text-secondary;
 	padding: .3em .7em;
 	@include size($width, $height);
-	font-size: $font-size-base;
+	font-size: 100%;
 	font-weight: normal;
 
 	&:focus, &:active, &:pressed, %caret {

@@ -33,7 +33,7 @@
 	&-button {
 		@include btn-primary;
 		@include btn-size("wide");
-		font-size: round($font-size-base*1.05);
+		font-size: 100%;
 	}
 }
 
