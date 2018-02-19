@@ -3,14 +3,14 @@
  * ====================================== */
 
 .slider {
-	height: 16px;
+	height: 6px;
 	min-width: 15em;
 	-slider-height: 6px;
 	-slider-background-color: $border-element;
 	-slider-active-background-color: $accent-primary;
 	-slider-border-color: transparent;
 	-slider-active-border-color: transparent;
-	-slider-border-width: 0;
+	-slider-border-width: -3px;
 	-slider-handle-radius: 2px;
 	-slider-radius: 0px;
 	color: transparent;
