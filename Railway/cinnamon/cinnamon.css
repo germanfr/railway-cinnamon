@@ -154,14 +154,16 @@ StScrollBar StButton#hhandle:active {
 /* ======================================
  * ! Switchers
  * ====================================== */
-.toggle-switch-us, .toggle-switch-intl {
-  width: 32px;
-  height: 17px;
+.toggle-switch, .toggle-switch-us, .toggle-switch-intl {
+  width: 30px;
+  height: 15px;
   background-image: url("img/controls/switch-off.svg");
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.toggle-switch-us:checked, .toggle-switch-intl:checked {
+.toggle-switch:checked, .toggle-switch-us:checked, .toggle-switch-intl:checked {
   background-image: url("img/controls/switch-on.svg");
+  background-color: #06b025;
 }
 
 /* ======================================

@@ -2,11 +2,13 @@
  * ! Switchers
  * ====================================== */
 
-.toggle-switch-us, .toggle-switch-intl {
-	@include size(32px, 17px);
+.toggle-switch, .toggle-switch-us, .toggle-switch-intl {
+	@include size(30px, 15px);
 	background-image: url("img/controls/switch-off.svg");
+	background-color: $border-element;
 
 	&:checked {
 		background-image: url("img/controls/switch-on.svg");
+		background-color: $accent-primary;
 	}
 }
