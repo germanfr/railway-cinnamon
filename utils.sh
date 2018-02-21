@@ -25,7 +25,6 @@ zip_name="$theme.zip"
 # Relative to the project's root
 package_files=(
     "$theme/cinnamon/cinnamon.css"
-    "$theme/cinnamon/theme.json"
     "$theme/cinnamon/thumbnail.png"
     "$theme/cinnamon/img/"
 )
@@ -132,7 +131,7 @@ package_all () {
 }
 
 spices_package () {
-    if [ $2 == "all" ]; then
+    if [ "$2" == "all" ]; then
         package_all
     else
         package_theme
