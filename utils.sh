@@ -34,7 +34,7 @@ package_files=(
 extra_files=(
     'LICENSE'
     'README.md'
-    'screenshot.png'
+    'screenshots/screenshot.png'
 )
 
 # ======================================
@@ -95,9 +95,10 @@ package_theme () {
     zip -r "$zip_name" "${package_files[@]}"
 
     for ef in ${extra_files[@]} ;do
-        ln -rfs "$ef" "$theme/$ef"
-        zip -r "$zip_name" "$theme/$ef"
-        rm -rf "$theme/$ef"
+        local filename=`basename $ef`
+        ln -rfs "$ef" "$theme/$filename"
+        zip -r "$zip_name" "$theme/$filename"
+        rm -rf "$theme/$filename"
     done
 
     echo "Files compressed into $zip_name"
