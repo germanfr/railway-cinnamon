@@ -1530,6 +1530,7 @@ or .applet-icon,
 }
 
 /*
+ * [DEPRECATED]
  * The window list thumbnail shares a class
  * with the alt-tab switcher, but it is
  * the direct child of the top container.
@@ -1537,21 +1538,14 @@ or .applet-icon,
  * Hopefully a 'switcher-list' doesn't appear
  * anywhere else as the direct child of '#uiGroup'.
  */
-#uiGroup > .switcher-list {
+#uiGroup > .switcher-list,
+.window-list-preview {
   background-color: rgba(74, 133, 198, 0.95);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 6px;
   color: white;
-  font-size: 92%;
-  font-weight: normal;
-}
-
-#uiGroup > .switcher-list > StBoxLayout {
-  spacing: .4em;
-}
-
-#uiGroup > .switcher-list > StBoxLayout > StBoxLayout {
-  spacing: .4em;
+  padding: 7px;
+  spacing: 4px;
 }
 
 /* ======================================

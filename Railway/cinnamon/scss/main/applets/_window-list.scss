@@ -44,6 +44,7 @@
 }
 
 /*
+ * [DEPRECATED]
  * The window list thumbnail shares a class
  * with the alt-tab switcher, but it is
  * the direct child of the top container.
@@ -51,17 +52,10 @@
  * Hopefully a 'switcher-list' doesn't appear
  * anywhere else as the direct child of '#uiGroup'.
  */
-#uiGroup > .switcher-list {
+#uiGroup > .switcher-list,
+.window-list-preview {
 	@include colored-element;
 	color: $text-primary-contrast;
-	font-size: $font-size-base;
-	font-weight: normal;
-
-	> StBoxLayout {
-		spacing: .4em;
-
-		> StBoxLayout {
-			spacing: .4em;
-		}
-	}
+	padding: 7px;
+	spacing: 4px;
 }
