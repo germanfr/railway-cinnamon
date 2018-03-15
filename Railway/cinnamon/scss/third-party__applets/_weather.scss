@@ -51,7 +51,6 @@
 }
 
 .weather-current-databox {
-	font-size: $font-size-base;
 	spacing: .3em;
 
 	> * { spacing: .3em; }
@@ -66,7 +65,6 @@
 
 .weather-current-astronomy {
 	color: $text-secondary;
-	font-size: $font-size-base;
 }
 
 .forecast {
@@ -86,7 +84,6 @@
 	/* temperature */
 	> *:last-child {
 		color: $text-primary;
-		font-size: $font-size-base;
 		font-weight: bold;
 	}
 }

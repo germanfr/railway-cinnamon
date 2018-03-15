@@ -11,20 +11,22 @@
 
 	.window-close {
 		background-image: url("img/controls/close-simple.svg");
-		background-size: 100%;
+		background-size: 16px;
 		@include size(16px);
 	}
 
 	.thumbnail {
-		&-label {
+		margin: 4px;
+		&-label, &-label-no-icon {
 			color: $text-primary-contrast;
 			font-weight: normal;
-			padding: 2px 2px 0;
+			padding: 4px 0 0 4px;
 		}
 
 		&-icon {
 			@include size(16px);
-			padding: 0 4px 4px;
+			padding: 4px;
+			padding-bottom: 0;
 		}
 	}
 }
@@ -36,6 +38,5 @@
 	text-shadow: 1px 1px 1px rgba(#000, .5);
 	padding: 2px;
 	font-size: $font-size-lg;
-	@include size($font-size-lg);
 	font-weight: normal;
 }

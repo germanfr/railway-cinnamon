@@ -33,7 +33,6 @@
 	&-button {
 		@include btn-primary;
 		@include btn-size("wide");
-		font-size: 100%;
 	}
 }
 
@@ -42,7 +41,6 @@
  * ====================================== */
 
 .run-dialog {
-
 	> * {
 		border-image: url("img/containers/inner-bg-dark.svg") 3;
 		spacing: 10px;
@@ -68,8 +66,7 @@
 
 	&-completion-box {
 		border-image: url("img/containers/inner-bg.svg") 3;
-		font-size: $font-size-base;
-		padding: 1em .7em 0;
+		padding: 7px;
 		color: $text-primary;
 	}
 
@@ -100,18 +97,14 @@
 }
 
 .about-uuid {
-	font-size: $font-size-base;
 	color: $text-secondary;
 	padding-left: 16px;
 }
 
-.about-description {
-	padding-left: 16px;
-}
+.about-description {/*!*/}
 
 .about-version {
 	padding: 8px;
-	font-size: $font-size-base;
 	font-weight: bold;
 	color: $text-info;
 }

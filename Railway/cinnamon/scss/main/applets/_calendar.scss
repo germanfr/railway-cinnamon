@@ -8,7 +8,6 @@
 
 .datemenu-date-label {
 	padding: .7em 1.3em .4em;
-	font-size: $font-size-base;
 	text-align: center;
 	color: $text-info;
 }
@@ -21,7 +20,6 @@
 
 .calendar-month-label {
 	padding-top: 2px;
-	font-size: $font-size-base;
 	color: $text-primary;
 	padding: .5em;
 }
@@ -52,7 +50,6 @@
 }
 
 .calendar-day-base {
-	font-size: $font-size-base;
 	padding: 1px 0 0 1px;
 	@include size(2.4em, 1.6em);
 }
@@ -79,5 +76,4 @@
 
 .calendar-week-number {
 	color: $text-secondary;
-	font-size: $font-size-base;
 }

@@ -45,18 +45,10 @@
 #LookingGlassDialog {
 	border-image: url("img/containers/tile-bg.svg") 10;
 	padding: 1.4em;
-	spacing: .4em;
+	spacing: .7em;
 	color: $text-primary-invert;
+	font-size: $font-size-base;
 	text-align: center;
+	font-weight: normal;
 
-	StLabel:first-child  {
-		font-weight: normal;
-		font-size: $font-size-base;
-	}
-
-	StLabel:last-child  {
-		padding-top: .4em;
-		color: $text-secondary-invert;
-		font-size: $font-size-base;
-	}
 }
