@@ -1,11 +1,10 @@
-/* Menu style
- * common: like any other popup menus
- * default: a more stylized menu
- */
+// Menu style
+//  * common: like any other popup menus
+//  * default: a more stylized menu
 $menu-style: "default";
 
-/* Main theme color */
+// Main theme color
 $theme-color: #4a85c6;	// Default: #4a85c6
 
-/* Whether to have opaque or traslucent menus */
+// Whether to have opaque or traslucent menus
 $opaque-menus: false;
