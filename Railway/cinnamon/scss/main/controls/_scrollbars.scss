@@ -30,25 +30,3 @@ StScrollBar {
 		}
 	}
 }
-
-/*
-@mixin classic-scrollbar {
-	StScrollBar {
-		background-color: #F0F0F0;
-		min-width: 12px;
-		padding: 0;
-
-		StButton#vhandle,
-		StButton#hhandle {
-			border-image: url("img/controls/scroll-handle-menu.svg") 4;
-
-			&:hover, &:focus, &:active {
-				border-image: url("img/controls/scroll-handle-menu-hover.svg") 4;
-			}
-		}
-	}
-
-	StScrollView.vfade StScrollBar,
-	StScrollView.hfade StScrollBar { padding: 0; }
-}
-*/

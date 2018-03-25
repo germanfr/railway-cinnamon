@@ -68,28 +68,33 @@
 }
 
 .forecast {
-	padding: .8em;
+	padding: 1.6em;
 	border-image: url("img/containers/menu-search__bottom.svg") 3;
 }
 
+.weather-forecast-box {
+	spacing: .8em;
+	padding-right: 2.4em;
+	&:last-child { padding-right: 0; }
+}
+
 .weather-forecast-icon {
-	padding: .8em;
+	padding: 0;
 	color: $text-primary;
 }
 
 .weather-forecast-databox {
-	padding: .8em 2.4em 0 .8em;
+	padding: 0;
 	spacing: .3em;
-
-	/* temperature */
-	> *:last-child {
-		color: $text-primary;
-		font-weight: bold;
-	}
 }
 
 .weather-forecast-day {
 	color: $text-primary;
 	font-size: $font-size-lg;
+	font-weight: bold;
+}
+
+.weather-forecast-temperature {
+	color: $text-primary;
 	font-weight: bold;
 }

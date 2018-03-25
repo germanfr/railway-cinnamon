@@ -44,6 +44,7 @@
 
 .menu-favorites-button {
 	padding: 10px 12px;
+	color: $text-primary-contrast;
 
 	&:hover {
 		border-image: url("img/containers/hover-transparent.svg") 8;
@@ -51,17 +52,8 @@
 	}
 }
 
-.menu-places-box {
-	padding: 8px;
-	border: 0 solid $text-primary;
-}
-
-.menu-places-button {
-	padding: 10px;
-}
-
 .menu-categories-box {
-	padding: 11px;
+	padding: 8px;
 	border-image: url("img/containers/menu-categories.svg") 8;
 }
 
@@ -83,8 +75,6 @@
 	&-label:ltr { padding-left: 5px; }
 
 	&-label:rtl { padding-right: 5px; }
-
-	&-button:hover {}
 }
 
 
