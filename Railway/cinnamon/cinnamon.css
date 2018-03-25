@@ -683,13 +683,11 @@ StScrollBar StButton#hhandle:active {
 
 #notification CinnamonGenericContainer * {
   font-weight: normal;
-  font-size: 92%;
   color: rgba(255, 255, 255, 0.65);
   /* Notification title */
 }
 
 #notification CinnamonGenericContainer *:first-child {
-  font-size: 92%;
   padding-top: .3em;
   color: white;
 }
@@ -699,9 +697,12 @@ StScrollBar StButton#hhandle:active {
   color: white;
 }
 
+#notification StIcon {
+  color: white;
+}
+
 #notification-body {
   font-weight: normal;
-  font-size: 92%;
 }
 
 #notification-actions {

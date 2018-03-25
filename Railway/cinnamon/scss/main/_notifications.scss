@@ -16,12 +16,10 @@
 
 	CinnamonGenericContainer * {
 		font-weight: normal;
-		font-size: $font-size-base;
 		color: $text-secondary-invert;
 
 		/* Notification title */
 		&:first-child {
-			font-size: $font-size-base;
 			padding-top: .3em;
 			color: $text-primary-invert;
 		}
@@ -32,9 +30,12 @@
 		}
 	}
 
+	StIcon {
+		color: $text-primary-invert;
+	}
+
 	&-body {
 		font-weight: normal;
-		font-size: $font-size-base;
 	}
 
 	&-actions {
