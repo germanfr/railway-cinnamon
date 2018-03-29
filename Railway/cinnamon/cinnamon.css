@@ -1307,20 +1307,6 @@ or .applet-icon,
   spacing: 0;
 }
 
-/* This is pretty much only used by the keyboard applet */
-.panel-status-button {
-  color: white;
-  height: inherit;
-}
-
-.panel-top .panel-status-button, .panel-bottom .panel-status-button {
-  padding: 0 2px;
-}
-
-.panel-left .panel-status-button, .panel-right .panel-status-button {
-  height: 1.8em;
-}
-
 .applet-label {
   color: white;
 }

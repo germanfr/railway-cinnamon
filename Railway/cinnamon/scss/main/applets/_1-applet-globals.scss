@@ -13,19 +13,6 @@ or/* ======================================
 	spacing: 0;
 }
 
-/* This is pretty much only used by the keyboard applet */
-.panel-status-button {
-	color: $text-primary-contrast;
-
-	.panel-top &, .panel-bottom & { padding: 0 2px; }
-
-	// prevents a bug when using custom icon scaling in horiz panels
-	height: inherit;
-
-	// prevents a bug when using custom icon scaling in vert panels
-	.panel-left &, .panel-right & { height: 1.8em; }
-}
-
 .applet-label {
 	color: $text-primary-contrast;
 }
