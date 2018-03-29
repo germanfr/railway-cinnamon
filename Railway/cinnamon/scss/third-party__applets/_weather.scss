@@ -14,11 +14,6 @@
 	}
 }
 
-.weather-icon,
-.weather-icon-rtl {
-	padding: 10px;
-}
-
 .current {
 	padding: 16px;
 
@@ -35,13 +30,14 @@
 }
 
 .weather-current-summarybox {
-	padding: 0 2.2em;
+	padding: 0 2em;
 	spacing: .1em;
 }
 
 .weather-current-summary {
 	font-size: $font-size-xxxl;
 	color: $text-primary;
+	text-align: center;
 }
 
 .weather-current-iconbox {}

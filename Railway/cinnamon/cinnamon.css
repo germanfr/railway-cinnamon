@@ -2031,11 +2031,6 @@ or .applet-icon,
   height: 0;
 }
 
-.weather-icon,
-.weather-icon-rtl {
-  padding: 10px;
-}
-
 .current {
   padding: 16px;
 }
@@ -2054,13 +2049,14 @@ or .applet-icon,
 }
 
 .weather-current-summarybox {
-  padding: 0 2.2em;
+  padding: 0 2em;
   spacing: .1em;
 }
 
 .weather-current-summary {
   font-size: 230%;
   color: rgba(0, 0, 0, 0.75);
+  text-align: center;
 }
 
 .weather-current-icon {
