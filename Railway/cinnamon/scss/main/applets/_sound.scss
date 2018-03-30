@@ -6,8 +6,8 @@
 	padding: 0;
 
 	> StBoxLayout:first-child {
-		padding: .4em 1.3em .6em;
-		spacing: .6em;
+		padding: 2px 8px 8px;
+		spacing: 8px;
 		font-weight: normal;
 		font-size: $font-size-lg;
 
@@ -37,6 +37,7 @@
 		StBoxLayout {
 			padding-top: .2em;
 			spacing: .4em;
+			max-width: 250px;
 		}
 	}
 
