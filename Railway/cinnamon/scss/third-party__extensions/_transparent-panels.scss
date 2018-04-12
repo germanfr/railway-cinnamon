@@ -1,0 +1,55 @@
+/* ======================================
+ * ! Transparent panels
+ * ====================================== */
+
+.panel-transparent,
+.panel-transparent-with-shadow {
+	text-shadow: 1px 1px 2px rgba(#000, .75);
+	.system-status-icon {
+		icon-shadow: 1px 1px 2px rgba(#000, .5);
+	}
+
+	.window-list-item-box {
+		text-shadow: 1px 1px 2px rgba(#000, .75);
+	}
+
+	#panelLeft, #panelCenter, #panelRight {
+		border-image: none;
+	}
+}
+
+.panel-transparent {
+	background: transparent;
+}
+
+.panel-transparent-with-shadow {
+	$initial-color: rgba(#000, .4);
+
+	&.panel-top {
+		background-gradient-direction: vertical;
+		background-gradient-start: $initial-color;
+		background-gradient-end: transparent;
+	}
+
+	&.panel-bottom {
+		background-gradient-direction: vertical;
+		background-gradient-start: transparent;
+		background-gradient-end: $initial-color;
+	}
+
+	&.panel-left {
+		background-gradient-direction: horizontal;
+		background-gradient-start: $initial-color;
+		background-gradient-end: transparent;
+	}
+
+	&.panel-right {
+		background-gradient-direction: horizontal;
+		background-gradient-start: transparent;
+		background-gradient-end: $initial-color;
+	}
+}
+
+.panel-semi-transparent {
+	/* Do nothing, theme is already semi-transparent */
+}

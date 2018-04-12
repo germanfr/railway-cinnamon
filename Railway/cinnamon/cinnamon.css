@@ -3410,3 +3410,60 @@ or .applet-icon,
   width: 16px;
   height: 16px;
 }
+
+/* ======================================
+ * ! Transparent panels
+ * ====================================== */
+.panel-transparent,
+.panel-transparent-with-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.panel-transparent .system-status-icon,
+.panel-transparent-with-shadow .system-status-icon {
+  icon-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.panel-transparent .window-list-item-box,
+.panel-transparent-with-shadow .window-list-item-box {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+.panel-transparent #panelLeft, .panel-transparent #panelCenter, .panel-transparent #panelRight,
+.panel-transparent-with-shadow #panelLeft,
+.panel-transparent-with-shadow #panelCenter,
+.panel-transparent-with-shadow #panelRight {
+  border-image: none;
+}
+
+.panel-transparent {
+  background: transparent;
+}
+
+.panel-transparent-with-shadow.panel-top {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(0, 0, 0, 0.4);
+  background-gradient-end: transparent;
+}
+
+.panel-transparent-with-shadow.panel-bottom {
+  background-gradient-direction: vertical;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(0, 0, 0, 0.4);
+}
+
+.panel-transparent-with-shadow.panel-left {
+  background-gradient-direction: horizontal;
+  background-gradient-start: rgba(0, 0, 0, 0.4);
+  background-gradient-end: transparent;
+}
+
+.panel-transparent-with-shadow.panel-right {
+  background-gradient-direction: horizontal;
+  background-gradient-start: transparent;
+  background-gradient-end: rgba(0, 0, 0, 0.4);
+}
+
+.panel-semi-transparent {
+  /* Do nothing, theme is already semi-transparent */
+}
