@@ -42,24 +42,26 @@
  * ====================================== */
 
 .workspace-graph {
-	padding: 0 6px;
+	padding: 0 round($applet-padding / 2);
 
-	.vertical & { padding: 6px 0; }
+	.vertical & { padding: round($applet-padding / 2) 0; }
 
 	.workspace {
-		background-color: rgba(#000, .25);
-		border: 1px rgba(#000, .6);
+		// background-color: rgba(invert($text-primary-contrast), .1);
+		// border: 1px darken($theme-color, 25%);
+		background-color: rgba(invert($text-primary-contrast), .1);
+		border: 1px rgba($text-primary-contrast, .25);
 
 		&:active {
-			border-color: #000;
-			background-color: rgba(#000, .5);
+			background-color: rgba(invert($text-primary-contrast), .25);
+			border-color: opacify($text-primary-contrast, .9);
 		}
 
 		.windows {
-			-active-window-background: rgba(#FFF, .8);
-			-active-window-border: rgba(#000, .8);
-			-inactive-window-background: rgba(#FFF, .4);
-			-inactive-window-border: rgba(#000, .4);
+			-active-window-background: rgba($text-primary-contrast, .8);
+			-active-window-border: rgba(invert($text-primary-contrast), .8);
+			-inactive-window-background: rgba($text-primary-contrast, .4);
+			-inactive-window-border: rgba(invert($text-primary-contrast), .4);
 		}
 	}
 }
