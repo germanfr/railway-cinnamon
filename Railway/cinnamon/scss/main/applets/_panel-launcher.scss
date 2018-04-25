@@ -19,4 +19,9 @@
 			border-image: url("img/panel/applet__vertical__hover.svg") 12;
 		}
 	}
+
+	.applet-box {
+		/* 1px padding bug */
+		padding: 0;
+	}
 }
