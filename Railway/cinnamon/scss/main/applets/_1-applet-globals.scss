@@ -1,6 +1,8 @@
-or/* ======================================
+/* ======================================
  * ! Applets
  * ====================================== */
+
+$applet-padding: 6px;
 
 /*
  * Fullcolor icons have the 'applet-icon' class.
@@ -33,7 +35,7 @@ or/* ======================================
 }
 
 .applet-box {
-	padding: 0 6px;
+	padding: 0 $applet-padding;
 	color: $text-primary-contrast;
 	spacing: 4px;
 
@@ -46,7 +48,7 @@ or/* ======================================
 	}
 
 	&.vertical {
-		padding: 6px 0;
+		padding: $applet-padding 0;
 
 		&:hover {
 			border-image: url("img/panel/applet__vertical__hover.svg") 10;

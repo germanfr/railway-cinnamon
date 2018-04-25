@@ -1301,7 +1301,14 @@ StScrollBar StButton#hhandle:active {
   border-image: url("img/containers/tooltip.svg") 10;
 }
 
-or .applet-icon,
+/* ======================================
+ * ! Applets
+ * ====================================== */
+/*
+ * Fullcolor icons have the 'applet-icon' class.
+ * Symbolic icons have the 'system-status-icon' class.
+ */
+.applet-icon,
 .system-status-icon {
   icon-size: 16px;
   padding: 0;
@@ -1718,15 +1725,19 @@ or .applet-icon,
   padding: 0 2px;
 }
 
-.workspace-switcher.vertical {
+.vertical .workspace-switcher {
   padding: 2px 0;
 }
 
 .workspace-button {
-  width: 24px;
-  height: 24px;
-  padding: 0 3px;
   color: rgba(255, 255, 255, 0.65);
+  padding: 0 6px;
+  min-width: 1.5em;
+}
+
+.workspace-button.vertical {
+  padding: 6px 0px;
+  min-height: 1.5em;
 }
 
 .workspace-button:hover {
@@ -1753,7 +1764,7 @@ or .applet-icon,
   padding: 0 6px;
 }
 
-.panel-left .workspace-graph, .panel-right .workspace-graph {
+.vertical .workspace-graph {
   padding: 6px 0;
 }
 

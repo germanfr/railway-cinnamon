@@ -4,14 +4,18 @@
 
 .workspace-switcher {
 	padding: 0 2px;
-
-	&.vertical { padding: 2px 0; }
+	.vertical & { padding: 2px 0; }
 }
 
 .workspace-button {
-	@include size(24px);
-	padding: 0 3px;
 	color: $text-secondary-contrast;
+	padding: 0 $applet-padding;
+	min-width: 1.5em;
+
+	&.vertical {
+		padding: $applet-padding 0px;
+		min-height: 1.5em;
+	}
 
 	&:hover {
 		border-image: url("img/panel/applet__horizontal__hover.svg") 12;
@@ -40,7 +44,7 @@
 .workspace-graph {
 	padding: 0 6px;
 
-	.panel-left &, .panel-right & { padding: 6px 0; }
+	.vertical & { padding: 6px 0; }
 
 	.workspace {
 		background-color: rgba(#000, .25);
