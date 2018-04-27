@@ -1810,7 +1810,7 @@ StScrollBar StButton#hhandle:active {
   border-image: url("img/panel/applet__vertical__hover.svg") 12;
 }
 
-.launcher .applet-box {
+.launcher .icon-box {
   /* 1px padding bug */
   padding: 0;
 }
