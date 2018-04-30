@@ -48,31 +48,19 @@
 
 		.menu-favorites-button {
 			color: $text-primary;
-			padding: 8px 16px;
+			padding: 8px 15px;
 
 			&:hover {
 				border-image: url("img/containers/hover-popup.svg") 10;
 			}
 		}
 
-		.menu-category-button {
-			padding: 8px 16px;
-			spacing: 0px;
-
-			&-selected {
-				@extend .menu-category-button;
-				border-image: url("img/containers/hover-popup.svg") 10;
-			}
-
-			&-greyed {
-				padding: 8px 16px;
-			}
+		.menu-category-button,
+		.menu-category-button-selected {
 
 			// "All programs" button
 			&:last-child {
-				padding: 8px;
-
-				> StIcon { padding: 0 8px; }
+				margin: 7px 0;
 			}
 		}
 
@@ -88,9 +76,11 @@
 
 		.menu-category-button {
 			color: $text-primary-contrast;
+			padding: 7px;
 
 			&-selected, &:hover {
 				color: $text-primary-contrast;
+				padding: 7px;
 				border-image: url("img/containers/hover-transparent.svg") 10;
 			}
 		}
@@ -98,7 +88,7 @@
 		.popup-separator-menu-item {
 			-gradient-height: 1px;
 			height: 1px;
-			padding: 2px;
+			padding: 2px 0;
 		}
 
 		.starkhover-box .popup-menu-item {

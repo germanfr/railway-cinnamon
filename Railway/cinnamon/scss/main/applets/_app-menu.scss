@@ -53,36 +53,15 @@
 }
 
 .menu-categories-box {
-	padding: 8px;
+	padding: 6px 1px;
 	border-image: url("img/containers/menu-categories.svg") 8;
 }
-
-.menu-category-button {
-	padding: .6em;
-	color: $text-primary;
-
-	&-greyed {
-		padding: .6em;
-		color: $text-disabled;
-	}
-
-	&-selected {
-		padding: .6em;
-		border-image: url("img/containers/hover.svg") 7;
-		color: $text-primary;
-	}
-
-	&-label:ltr { padding-left: 5px; }
-
-	&-label:rtl { padding-right: 5px; }
-}
-
 
 .menu-applications-outer-box {
 	spacing: 7px;
 
 	.menu-applications-inner-box {
-		padding: 8px 0;
+		padding: 6px 0;
 	}
 
 	.menu-applications-scrollbox {
@@ -91,23 +70,31 @@
 	}
 }
 
-.menu-application-button {
-	padding: 8px 16px;
+.menu-application-button,
+.menu-category-button {
+	padding: 8px 15px;
+	spacing: 8px;
 
 	&-selected, &-selected:highlighted {
-		padding: 8px 16px;
+		padding: 8px 15px;
+		spacing: 8px;
 		border-image: url("img/containers/hover-popup.svg") 10;
 		color: $text-primary;
+	}
+
+	&-greyed {
+		padding: 8px 15px;
+		spacing: 8px;
+		color: $text-disabled;
 	}
 
 	&:highlighted {
 		border-image: url("img/containers/hover-popup__highlighted.svg") 10;
 	}
 
-	&-label:ltr { padding-left: 5px; }
-
-	&-label:rtl { padding-right: 5px; }
+	&-label { padding: 0px; }
 }
+
 
 .menu-selected-app-box {
 	margin: 6px 6px 0;

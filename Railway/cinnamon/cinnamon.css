@@ -1865,32 +1865,8 @@ StScrollBar StButton#hhandle:active {
 }
 
 .menu-categories-box {
-  padding: 8px;
+  padding: 6px 1px;
   border-image: url("img/containers/menu-categories.svg") 8;
-}
-
-.menu-category-button, .starkmenu-background .menu-favorites-box .menu-category-button-selected {
-  padding: .6em;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.menu-category-button-greyed {
-  padding: .6em;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.menu-category-button-selected {
-  padding: .6em;
-  border-image: url("img/containers/hover.svg") 7;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.menu-category-button-label:ltr {
-  padding-left: 5px;
-}
-
-.menu-category-button-label:rtl {
-  padding-right: 5px;
 }
 
 .menu-applications-outer-box {
@@ -1898,7 +1874,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .menu-applications-outer-box .menu-applications-inner-box {
-  padding: 8px 0;
+  padding: 6px 0;
 }
 
 .menu-applications-outer-box .menu-applications-scrollbox {
@@ -1906,26 +1882,36 @@ StScrollBar StButton#hhandle:active {
   border-image: url("img/containers/menu-apps.svg") 8;
 }
 
-.menu-application-button {
-  padding: 8px 16px;
+.menu-application-button,
+.menu-category-button {
+  padding: 8px 15px;
+  spacing: 8px;
 }
 
-.menu-application-button-selected, .menu-application-button-selected:highlighted {
-  padding: 8px 16px;
+.menu-application-button-selected, .menu-application-button-selected:highlighted,
+.menu-category-button-selected,
+.menu-category-button-selected:highlighted {
+  padding: 8px 15px;
+  spacing: 8px;
   border-image: url("img/containers/hover-popup.svg") 10;
   color: rgba(0, 0, 0, 0.75);
 }
 
-.menu-application-button:highlighted {
+.menu-application-button-greyed,
+.menu-category-button-greyed {
+  padding: 8px 15px;
+  spacing: 8px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.menu-application-button:highlighted,
+.menu-category-button:highlighted {
   border-image: url("img/containers/hover-popup__highlighted.svg") 10;
 }
 
-.menu-application-button-label:ltr {
-  padding-left: 5px;
-}
-
-.menu-application-button-label:rtl {
-  padding-right: 5px;
+.menu-application-button-label,
+.menu-category-button-label {
+  padding: 0px;
 }
 
 .menu-selected-app-box {
@@ -2797,32 +2783,16 @@ StScrollBar StButton#hhandle:active {
 
 .starkmenu-background .menu-favorites-box .menu-favorites-button {
   color: rgba(0, 0, 0, 0.75);
-  padding: 8px 16px;
+  padding: 8px 15px;
 }
 
 .starkmenu-background .menu-favorites-box .menu-favorites-button:hover {
   border-image: url("img/containers/hover-popup.svg") 10;
 }
 
-.starkmenu-background .menu-favorites-box .menu-category-button, .starkmenu-background .menu-favorites-box .menu-category-button-selected {
-  padding: 8px 16px;
-  spacing: 0px;
-}
-
-.starkmenu-background .menu-favorites-box .menu-category-button-selected {
-  border-image: url("img/containers/hover-popup.svg") 10;
-}
-
-.starkmenu-background .menu-favorites-box .menu-category-button-greyed {
-  padding: 8px 16px;
-}
-
-.starkmenu-background .menu-favorites-box .menu-category-button:last-child, .starkmenu-background .menu-favorites-box .menu-category-button-selected:last-child {
-  padding: 8px;
-}
-
-.starkmenu-background .menu-favorites-box .menu-category-button:last-child > StIcon, .starkmenu-background .menu-favorites-box .menu-category-button-selected:last-child > StIcon {
-  padding: 0 8px;
+.starkmenu-background .menu-favorites-box .menu-category-button:last-child,
+.starkmenu-background .menu-favorites-box .menu-category-button-selected:last-child {
+  margin: 7px 0;
 }
 
 .starkmenu-background .menu-favorites-box .menu-context-menu {
@@ -2835,19 +2805,21 @@ StScrollBar StButton#hhandle:active {
   color: white;
 }
 
-.starkmenu-background .right-buttons-box .menu-category-button, .starkmenu-background .right-buttons-box .menu-favorites-box .menu-category-button-selected, .starkmenu-background .menu-favorites-box .right-buttons-box .menu-category-button-selected {
+.starkmenu-background .right-buttons-box .menu-category-button {
   color: white;
+  padding: 7px;
 }
 
-.starkmenu-background .right-buttons-box .menu-category-button-selected, .starkmenu-background .right-buttons-box .menu-category-button:hover, .starkmenu-background .right-buttons-box .menu-favorites-box .menu-category-button-selected:hover, .starkmenu-background .menu-favorites-box .right-buttons-box .menu-category-button-selected:hover {
+.starkmenu-background .right-buttons-box .menu-category-button-selected, .starkmenu-background .right-buttons-box .menu-category-button:hover {
   color: white;
+  padding: 7px;
   border-image: url("img/containers/hover-transparent.svg") 10;
 }
 
 .starkmenu-background .right-buttons-box .popup-separator-menu-item {
   -gradient-height: 1px;
   height: 1px;
-  padding: 2px;
+  padding: 2px 0;
 }
 
 .starkmenu-background .right-buttons-box .starkhover-box .popup-menu-item {
