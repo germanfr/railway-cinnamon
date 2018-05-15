@@ -377,19 +377,22 @@ StScrollBar StButton#hhandle:active {
   color: rgba(0, 0, 0, 0.75);
 }
 
+.separator,
 .popup-separator-menu-item {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: .5em 1.4em;
+  padding: 0;
+}
+
+.popup-menu-item > .separator, .popup-menu-item >
+.popup-separator-menu-item {
+  /* Cinnamon < 4.0 */
+  margin: 0;
   -gradient-height: 1px;
   -gradient-start: transparent;
   -gradient-end: transparent;
   -margin-horizontal: 0;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
-  margin: .5em 1.4em;
-}
-
-.popup-menu-item > .popup-separator-menu-item {
-  /* Cinnamon < 4.0 */
-  margin: 0;
 }
 
 /* Right click in scale (show all windows) */
@@ -2039,8 +2042,9 @@ StScrollBar StButton#hhandle:active {
 }
 
 .weather-menu .popup-separator-menu-item {
-  background-image: none;
+  background: none;
   height: 0;
+  margin: 0;
 }
 
 .current {
@@ -2797,11 +2801,6 @@ StScrollBar StButton#hhandle:active {
   border-image: url("img/containers/hover-popup.svg") 10;
 }
 
-.starkmenu-background .menu-favorites-box .menu-category-button:last-child,
-.starkmenu-background .menu-favorites-box .menu-category-button-selected:last-child {
-  margin: 7px 0;
-}
-
 .starkmenu-background .menu-favorites-box .menu-context-menu {
   border-image: url("img/containers/popup-submenu.svg") 10;
   padding: 1em .2em;
@@ -2823,12 +2822,6 @@ StScrollBar StButton#hhandle:active {
   border-image: url("img/containers/hover-transparent.svg") 10;
 }
 
-.starkmenu-background .right-buttons-box .popup-separator-menu-item {
-  -gradient-height: 1px;
-  height: 1px;
-  padding: 2px 0;
-}
-
 .starkmenu-background .right-buttons-box .starkhover-box .popup-menu-item {
   color: white;
 }
@@ -2840,6 +2833,7 @@ StScrollBar StButton#hhandle:active {
 .starkmenu-search-box {
   border-image: url("img/containers/menu-search__bottom.svg") 8;
   padding: 11px 10px 10px;
+  margin-top: 7px;
 }
 
 .starkmenu-quit-horizontal-button,

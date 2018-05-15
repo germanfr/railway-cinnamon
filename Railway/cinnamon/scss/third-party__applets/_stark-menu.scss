@@ -55,15 +55,6 @@
 			}
 		}
 
-		.menu-category-button,
-		.menu-category-button-selected {
-
-			// "All programs" button
-			&:last-child {
-				margin: 7px 0;
-			}
-		}
-
 		.menu-context-menu {
 			border-image: url("img/containers/popup-submenu.svg") 10;
 			padding: 1em .2em;
@@ -85,12 +76,6 @@
 			}
 		}
 
-		.popup-separator-menu-item {
-			-gradient-height: 1px;
-			height: 1px;
-			padding: 2px 0;
-		}
-
 		.starkhover-box .popup-menu-item {
 			color: $text-primary-contrast;
 			&:active {
@@ -103,6 +88,7 @@
 .starkmenu-search-box {
 	border-image: url("img/containers/menu-search__bottom.svg") 8;
 	padding: 11px 10px 10px;
+	margin-top: 7px;
 }
 
 @each $action in quit, logout, lockscreen {

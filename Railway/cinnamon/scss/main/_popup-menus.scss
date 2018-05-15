@@ -61,17 +61,19 @@
 	color: $text-primary;
 }
 
+.separator,
 .popup-separator-menu-item {
-	-gradient-height: 1px;
-	-gradient-start: transparent;
-	-gradient-end: transparent;
-	-margin-horizontal: 0;
 	height: 1px;
 	background-color: $border-element;
 	margin: .5em 1.4em;
+	padding: 0;
 
 	.popup-menu-item > & { /* Cinnamon < 4.0 */
 		margin: 0;
+		-gradient-height: 1px;
+		-gradient-start: transparent;
+		-gradient-end: transparent;
+		-margin-horizontal: 0;
 	}
 }
 
