@@ -38,6 +38,12 @@ stage {
   color: rgba(0, 0, 0, 0) !important;
 }
 
+StIcon {
+  warning-color: #ebaf00;
+  error-color: #ff2c2c;
+  success-color: #0e7eff;
+}
+
 /* ======================================
  * ! Tooltips
  * ====================================== */
