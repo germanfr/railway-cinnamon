@@ -35,7 +35,7 @@ stage {
 }
 
 .label-shadow {
-  color: transparent !important;
+  color: rgba(0, 0, 0, 0) !important;
 }
 
 /* ======================================
@@ -74,7 +74,7 @@ StScrollView.hfade StScrollBar {
 }
 
 StScrollBar StBin#trough {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 StScrollBar StButton#vhandle,
@@ -210,11 +210,11 @@ StScrollBar StButton#hhandle:active {
  * ! Button (global selector)
  * ====================================== */
 .button {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -304,8 +304,8 @@ StScrollBar StButton#hhandle:active {
  * ====================================== */
 .separator {
   -gradient-height: 1px;
-  -gradient-start: transparent;
-  -gradient-end: transparent;
+  -gradient-start: rgba(0, 0, 0, 0);
+  -gradient-end: rgba(0, 0, 0, 0);
   -margin-horizontal: 0;
   background-image: url("img/misc/separator.svg");
   background-repeat: repeat;
@@ -514,12 +514,12 @@ StScrollBar StButton#hhandle:active {
 }
 
 .expo-workspace-thumbnail-frame {
-  border: 5px transparent;
+  border: 5px rgba(0, 0, 0, 0);
   border-image: url("img/expo_scale/workspace-shadow.svg") 10;
 }
 
 .expo-workspace-thumbnail-frame#active {
-  border: 5px transparent;
+  border: 5px rgba(0, 0, 0, 0);
   border-image: url("img/expo_scale/workspace-shadow.svg") 10;
 }
 
@@ -529,7 +529,7 @@ StScrollBar StButton#hhandle:active {
 
 /* This shades the workspace thumbnails */
 .workspace-thumbnails .workspace-overview-background-shade {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .expo-workspaces-name-entry {
@@ -713,11 +713,11 @@ StScrollBar StButton#hhandle:active {
 
 .notification-button,
 .notification-icon-button {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -847,11 +847,11 @@ StScrollBar StButton#hhandle:active {
 
 #traycontainer .notification-button,
 #traycontainer .notification-icon-button {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -1053,11 +1053,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .modal-dialog-button {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -1135,7 +1135,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 .run-dialog > .modal-dialog-button-box {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border-image: none;
   padding: 0;
   height: 0;
@@ -1232,11 +1232,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .keyboard-key {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -1556,11 +1556,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .sound-player > StBoxLayout:first-child StButton {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -1642,11 +1642,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .sound-player-overlay StButton {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -1838,8 +1838,8 @@ StScrollBar StButton#hhandle:active {
   padding: 4px;
   width: 48px;
   height: 48px;
-  border: 0 transparent;
-  background-color: transparent;
+  border: 0 rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 0;
 }
 
@@ -2181,12 +2181,12 @@ StScrollBar StButton#hhandle:active {
 /* Paginator */
 .slingshot .button {
   box-shadow: none;
-  text-shadow: 0 0 transparent;
-  background-color: transparent;
+  text-shadow: 0 0 rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -2258,14 +2258,14 @@ StScrollBar StButton#hhandle:active {
 .slingshot .button.app {
   border-image: none;
   border-width: 0;
-  text-shadow: 0 0 transparent;
+  text-shadow: 0 0 rgba(0, 0, 0, 0);
   font-weight: normal;
   padding: 16px;
 }
 
 .slingshot .button.app:hover, .slingshot .button.app:focus {
   border-image: url("img/containers/hover.svg") 7;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0.75);
 }
 
@@ -2278,7 +2278,7 @@ StScrollBar StButton#hhandle:active {
 .slingshot .sidebar .button {
   border-image: none;
   padding: 5px;
-  border-color: transparent;
+  border-color: rgba(0, 0, 0, 0);
   padding-top: 8px;
   padding-bottom: 8px;
   font-weight: normal;
@@ -2296,11 +2296,11 @@ StScrollBar StButton#hhandle:active {
 
 /* Linked buttons */
 .slingshot .linked .button {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -2369,11 +2369,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .slingshot .linked .button:first-child {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -2440,11 +2440,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .slingshot .linked .button:last-child {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -2511,11 +2511,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .slingshot .linked .button:last-child:first-child {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -2597,7 +2597,7 @@ StScrollBar StButton#hhandle:active {
 .stopwatch-day-exceeded,
 .stopwatch-running-day-exceeded,
 .stopwatch-paused-day-exceeded {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   padding: 0 8px;
 }
 
@@ -3008,9 +3008,9 @@ StScrollBar StButton#hhandle:active {
  * ====================================== */
 .xkcd-box {
   padding: 0px;
-  border: 0 transparent;
+  border: 0 rgba(0, 0, 0, 0);
   box-shadow: none;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 0;
 }
 
@@ -3076,11 +3076,11 @@ StScrollBar StButton#hhandle:active {
 
 /* buttons */
 .settings-button {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -3148,11 +3148,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .settings-button:first-child {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -3219,11 +3219,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .settings-button:last-child {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
@@ -3290,11 +3290,11 @@ StScrollBar StButton#hhandle:active {
 }
 
 .settings-button:last-child:first-child {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-gradient-direction: none;
-  background-gradient-start: transparent;
-  background-gradient-end: transparent;
-  box-shadow: 0 0 transparent;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
   border: none;
   border-width: 0;
   border-radius: 0;
